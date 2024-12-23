@@ -1,9 +1,6 @@
 # codewars.js Documentation
 
-*readme generated from the following script: [LINK](./generate-readme.js)*
-
-- This is not code I use to develop or for work!! This is code I've written when hobby coding/expirementing
-- It also includes a node script to generate a similar readme as this from a single file
+## Quick Index
 
 - [addCommasToNum](#addcommastonum) (Line 45)
 - [arrHash](#arrhash) (Line 279)
