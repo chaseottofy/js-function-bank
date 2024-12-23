@@ -1,5 +1,7 @@
 # codewars.js Documentation
 
+*readme generated from the following script: [LINK](./generate-readme.js)*
+
 ## Quick Index
 
 - [add](#add) (Line 372)
