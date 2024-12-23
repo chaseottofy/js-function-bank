@@ -161,7 +161,8 @@
 
 ## Detailed Documentation
 
-### addCommasToNum **[→ Line 45](./codewars.js#L45)**
+### addCommasToNum 
+**[→ Line 45](./codewars.js#L45)**
 
 ```javascript
 const addCommasToNum = (n) => {
@@ -169,7 +170,8 @@ const addCommasToNum = (n) => {
 };
 ```
 
-### arrHash **[→ Line 279](./codewars.js#L279)**
+### arrHash 
+**[→ Line 279](./codewars.js#L279)**
 
 ```javascript
 const arrHash = (arr) => {
@@ -181,7 +183,8 @@ const arrHash = (arr) => {
 };
 ```
 
-### binarySearch1 **[→ Line 1081](./codewars.js#L1081)**
+### binarySearch1 
+**[→ Line 1081](./codewars.js#L1081)**
 
 ```javascript
 const binarySearch1 = (lst, val) => {
@@ -205,7 +208,8 @@ const binarySearch1 = (lst, val) => {
 };
 ```
 
-### bitadd **[→ Line 1010](./codewars.js#L1010)**
+### bitadd 
+**[→ Line 1010](./codewars.js#L1010)**
 
 ```javascript
 const bitadd = (x, y) => {
@@ -223,13 +227,15 @@ const bitadd = (x, y) => {
 };
 ```
 
-### bitMod1 **[→ Line 71](./codewars.js#L71)**
+### bitMod1 
+**[→ Line 71](./codewars.js#L71)**
 
 ```javascript
 const bitMod1 = (a, b) => (b ? a - b * (a / b | 0) : Number.NaN);
 ```
 
-### bitwiseAdd **[→ Line 1024](./codewars.js#L1024)**
+### bitwiseAdd 
+**[→ Line 1024](./codewars.js#L1024)**
 
 ```javascript
 const bitwiseAdd = (x, y) => {
@@ -244,7 +250,8 @@ const bitwiseAdd = (x, y) => {
 };
 ```
 
-### bitwiseExponent **[→ Line 1035](./codewars.js#L1035)**
+### bitwiseExponent 
+**[→ Line 1035](./codewars.js#L1035)**
 
 ```javascript
 const bitwiseExponent = (a, n) => {
@@ -259,7 +266,8 @@ const bitwiseExponent = (a, n) => {
 };
 ```
 
-### bitwiseMult **[→ Line 1046](./codewars.js#L1046)**
+### bitwiseMult 
+**[→ Line 1046](./codewars.js#L1046)**
 
 ```javascript
 const bitwiseMult = (a, b) => {
@@ -275,7 +283,8 @@ const bitwiseMult = (a, b) => {
 };
 ```
 
-### bitwiseSubtract **[→ Line 1058](./codewars.js#L1058)**
+### bitwiseSubtract 
+**[→ Line 1058](./codewars.js#L1058)**
 
 ```javascript
 const bitwiseSubtract = (x, y) => {
@@ -295,13 +304,15 @@ const bitwiseSubtract = (x, y) => {
 };
 ```
 
-### boolToInt **[→ Line 19](./codewars.js#L19)**
+### boolToInt 
+**[→ Line 19](./codewars.js#L19)**
 
 ```javascript
 const boolToInt = (bool) => bool | 0;
 ```
 
-### buildPriorityQueue **[→ Line 1280](./codewars.js#L1280)**
+### buildPriorityQueue 
+**[→ Line 1280](./codewars.js#L1280)**
 
 ```javascript
 const buildPriorityQueue = (frequencies) => {
@@ -326,7 +337,8 @@ const buildPriorityQueue = (frequencies) => {
 };
 ```
 
-### buildTrie **[→ Line 1213](./codewars.js#L1213)**
+### buildTrie 
+**[→ Line 1213](./codewars.js#L1213)**
 
 ```javascript
 const buildTrie = (...words) => {
@@ -345,7 +357,8 @@ const buildTrie = (...words) => {
 };
 ```
 
-### calcTrueMod **[→ Line 125](./codewars.js#L125)**
+### calcTrueMod 
+**[→ Line 125](./codewars.js#L125)**
 
 ```javascript
 const calcTrueMod = (dividend, exponent, modulus) => {
@@ -356,7 +369,8 @@ const calcTrueMod = (dividend, exponent, modulus) => {
 };
 ```
 
-### calcVariance **[→ Line 1306](./codewars.js#L1306)**
+### calcVariance 
+**[→ Line 1306](./codewars.js#L1306)**
 
 ```javascript
 const calcVariance = (data) => {
@@ -376,7 +390,8 @@ const calcVariance = (data) => {
 };
 ```
 
-### cbMemo **[→ Line 1335](./codewars.js#L1335)**
+### cbMemo 
+**[→ Line 1335](./codewars.js#L1335)**
 
 ```javascript
 const cbMemo = (fn) => {
@@ -395,7 +410,8 @@ const cbMemo = (fn) => {
 };
 ```
 
-### combineMultArr **[→ Line 662](./codewars.js#L662)**
+### combineMultArr 
+**[→ Line 662](./codewars.js#L662)**
 
 ```javascript
 const combineMultArr = ([head, ...[headTail, ...tailTail]]) => {
@@ -407,7 +423,8 @@ const combineMultArr = ([head, ...[headTail, ...tailTail]]) => {
 };
 ```
 
-### combineObjects **[→ Line 670](./codewars.js#L670)**
+### combineObjects 
+**[→ Line 670](./codewars.js#L670)**
 
 ```javascript
 const combineObjects = (...args) => {
@@ -424,13 +441,15 @@ const combineObjects = (...args) => {
 };
 ```
 
-### comp **[→ Line 81](./codewars.js#L81)**
+### comp 
+**[→ Line 81](./codewars.js#L81)**
 
 ```javascript
 const comp = (a, b, i, m) => (i < m ? a[i] - b[i] || comp(a, b, i + 1, m) : 0);
 ```
 
-### compose **[→ Line 1254](./codewars.js#L1254)**
+### compose 
+**[→ Line 1254](./codewars.js#L1254)**
 
 ```javascript
 const compose = (f, g) => {
@@ -446,7 +465,8 @@ const compose = (f, g) => {
 };
 ```
 
-### compress **[→ Line 726](./codewars.js#L726)**
+### compress 
+**[→ Line 726](./codewars.js#L726)**
 
 ```javascript
 const compress = (str) => {
@@ -471,7 +491,8 @@ const compress = (str) => {
 };
 ```
 
-### convertToMixedNumeral **[→ Line 439](./codewars.js#L439)**
+### convertToMixedNumeral 
+**[→ Line 439](./codewars.js#L439)**
 
 ```javascript
 const convertToMixedNumeral = (parm) => {
@@ -483,7 +504,8 @@ const convertToMixedNumeral = (parm) => {
 };
 ```
 
-### convPeriodicFrac **[→ Line 409](./codewars.js#L409)**
+### convPeriodicFrac 
+**[→ Line 409](./codewars.js#L409)**
 
 ```javascript
 const convPeriodicFrac = (n, d) => {
@@ -508,7 +530,8 @@ const convPeriodicFrac = (n, d) => {
 };
 ```
 
-### countAllStrInstancesInObj **[→ Line 1426](./codewars.js#L1426)**
+### countAllStrInstancesInObj 
+**[→ Line 1426](./codewars.js#L1426)**
 
 ```javascript
 const countAllStrInstancesInObj = (obj) => {
@@ -527,7 +550,8 @@ const countAllStrInstancesInObj = (obj) => {
 };
 ```
 
-### countFiveAndTwo **[→ Line 132](./codewars.js#L132)**
+### countFiveAndTwo 
+**[→ Line 132](./codewars.js#L132)**
 
 ```javascript
 const countFiveAndTwo = (n, k) => {
@@ -541,7 +565,8 @@ const countFiveAndTwo = (n, k) => {
 };
 ```
 
-### countFourAndTwo **[→ Line 142](./codewars.js#L142)**
+### countFourAndTwo 
+**[→ Line 142](./codewars.js#L142)**
 
 ```javascript
 const countFourAndTwo = (n, k) => {
@@ -552,7 +577,8 @@ const countFourAndTwo = (n, k) => {
 };
 ```
 
-### countPermsOfMatrix **[→ Line 1199](./codewars.js#L1199)**
+### countPermsOfMatrix 
+**[→ Line 1199](./codewars.js#L1199)**
 
 ```javascript
 const countPermsOfMatrix = (mtr) => {
@@ -570,7 +596,8 @@ const countPermsOfMatrix = (mtr) => {
 };
 ```
 
-### countTrailingZerosOfFactorial **[→ Line 361](./codewars.js#L361)**
+### countTrailingZerosOfFactorial 
+**[→ Line 361](./codewars.js#L361)**
 
 ```javascript
 const countTrailingZerosOfFactorial = (n) => {
@@ -582,7 +609,8 @@ const countTrailingZerosOfFactorial = (n) => {
 };
 ```
 
-### createIterator **[→ Line 648](./codewars.js#L648)**
+### createIterator 
+**[→ Line 648](./codewars.js#L648)**
 
 ```javascript
 const createIterator = (func, n) => (x) => {
@@ -594,13 +622,15 @@ const createIterator = (func, n) => (x) => {
 };
 ```
 
-### createMatrix **[→ Line 43](./codewars.js#L43)**
+### createMatrix 
+**[→ Line 43](./codewars.js#L43)**
 
 ```javascript
 const createMatrix = (a, b) => new Array(a).fill().map((_, i) => new Array(b).fill().map((__, j) => ''));
 ```
 
-### curryAdd **[→ Line 796](./codewars.js#L796)**
+### curryAdd 
+**[→ Line 796](./codewars.js#L796)**
 
 ```javascript
 const curryAdd = (n) => {
@@ -610,7 +640,8 @@ const curryAdd = (n) => {
 };
 ```
 
-### curryCountdown **[→ Line 802](./codewars.js#L802)**
+### curryCountdown 
+**[→ Line 802](./codewars.js#L802)**
 
 ```javascript
 const curryCountdown = (times, arr = []) => {
@@ -635,7 +666,8 @@ const curryCountdown = (times, arr = []) => {
 };
 ```
 
-### cycle **[→ Line 656](./codewars.js#L656)**
+### cycle 
+**[→ Line 656](./codewars.js#L656)**
 
 ```javascript
 const cycle = (...values) => {
@@ -645,7 +677,8 @@ const cycle = (...values) => {
 };
 ```
 
-### deepKeys **[→ Line 714](./codewars.js#L714)**
+### deepKeys 
+**[→ Line 714](./codewars.js#L714)**
 
 ```javascript
 const deepKeys = (t, pre = []) => {
@@ -661,7 +694,8 @@ const deepKeys = (t, pre = []) => {
 };
 ```
 
-### deepReverse **[→ Line 709](./codewars.js#L709)**
+### deepReverse 
+**[→ Line 709](./codewars.js#L709)**
 
 ```javascript
 const deepReverse = (l) => {
@@ -670,7 +704,8 @@ const deepReverse = (l) => {
 };
 ```
 
-### deepVals **[→ Line 690](./codewars.js#L690)**
+### deepVals 
+**[→ Line 690](./codewars.js#L690)**
 
 ```javascript
 const deepVals = (obj) => {
@@ -693,7 +728,8 @@ const deepVals = (obj) => {
 };
 ```
 
-### dfs1 **[→ Line 1171](./codewars.js#L1171)**
+### dfs1 
+**[→ Line 1171](./codewars.js#L1171)**
 
 ```javascript
 const dfs1 = (nums) => {
@@ -710,13 +746,15 @@ const dfs1 = (nums) => {
 };
 ```
 
-### divide **[→ Line 33](./codewars.js#L33)**
+### divide 
+**[→ Line 33](./codewars.js#L33)**
 
 ```javascript
 const divide = (a, b) => (b === 0 ? 0 : (a === 0 ? 0 : a * b ** -1));
 ```
 
-### divideArray **[→ Line 245](./codewars.js#L245)**
+### divideArray 
+**[→ Line 245](./codewars.js#L245)**
 
 ```javascript
 const divideArray = (arr, k) => {
@@ -731,7 +769,8 @@ const divideArray = (arr, k) => {
 };
 ```
 
-### divisorsSum **[→ Line 335](./codewars.js#L335)**
+### divisorsSum 
+**[→ Line 335](./codewars.js#L335)**
 
 ```javascript
 const divisorsSum = (n) => {
@@ -745,13 +784,15 @@ const divisorsSum = (n) => {
 };
 ```
 
-### extractIdsFromObject **[→ Line 99](./codewars.js#L99)**
+### extractIdsFromObject 
+**[→ Line 99](./codewars.js#L99)**
 
 ```javascript
 const extractIdsFromObject = (data) => (JSON.stringify(data).matchAll(/"id":\d+/gi) || []).map((n) => +n[0].match(/\d+/g)[0]);
 ```
 
-### factorial **[→ Line 383](./codewars.js#L383)**
+### factorial 
+**[→ Line 383](./codewars.js#L383)**
 
 ```javascript
 const factorial = (n) => {
@@ -763,7 +804,8 @@ const factorial = (n) => {
 };
 ```
 
-### factorialfast **[→ Line 369](./codewars.js#L369)**
+### factorialfast 
+**[→ Line 369](./codewars.js#L369)**
 
 ```javascript
 const factorialfast = (n) => {
@@ -781,7 +823,8 @@ const factorialfast = (n) => {
 };
 ```
 
-### fibWithMod **[→ Line 987](./codewars.js#L987)**
+### fibWithMod 
+**[→ Line 987](./codewars.js#L987)**
 
 ```javascript
 const fibWithMod = (n) => {
@@ -794,7 +837,8 @@ const fibWithMod = (n) => {
 };
 ```
 
-### find **[→ Line 219](./codewars.js#L219)**
+### find 
+**[→ Line 219](./codewars.js#L219)**
 
 ```javascript
 const find = (s) => {
@@ -824,7 +868,8 @@ const find = (s) => {
 };
 ```
 
-### findchar **[→ Line 601](./codewars.js#L601)**
+### findchar 
+**[→ Line 601](./codewars.js#L601)**
 
 ```javascript
 const findchar = (arr, char) => {
@@ -838,7 +883,8 @@ const findchar = (arr, char) => {
 };
 ```
 
-### findDup **[→ Line 269](./codewars.js#L269)**
+### findDup 
+**[→ Line 269](./codewars.js#L269)**
 
 ```javascript
 const findDup = (arr) => {
@@ -852,13 +898,15 @@ const findDup = (arr) => {
 };
 ```
 
-### findGCD **[→ Line 11](./codewars.js#L11)**
+### findGCD 
+**[→ Line 11](./codewars.js#L11)**
 
 ```javascript
 const findGCD = (a, b) => (b === 0 ? a : findGCD(b, a % b));
 ```
 
-### findLongestSubstr **[→ Line 918](./codewars.js#L918)**
+### findLongestSubstr 
+**[→ Line 918](./codewars.js#L918)**
 
 ```javascript
 const findLongestSubstr = (s) => {
@@ -876,7 +924,8 @@ const findLongestSubstr = (s) => {
 };
 ```
 
-### findSubarrMaxSum **[→ Line 823](./codewars.js#L823)**
+### findSubarrMaxSum 
+**[→ Line 823](./codewars.js#L823)**
 
 ```javascript
 const findSubarrMaxSum = (arr) => {
@@ -912,7 +961,8 @@ const findSubarrMaxSum = (arr) => {
 };
 ```
 
-### findUniqNumInArr **[→ Line 159](./codewars.js#L159)**
+### findUniqNumInArr 
+**[→ Line 159](./codewars.js#L159)**
 
 ```javascript
 const findUniqNumInArr = (arr) => {
@@ -924,7 +974,8 @@ const findUniqNumInArr = (arr) => {
 };
 ```
 
-### FrequencyNode **[→ Line 1591](./codewars.js#L1591)**
+### FrequencyNode 
+**[→ Line 1591](./codewars.js#L1591)**
 
 ```javascript
 class FrequencyNode {
@@ -937,13 +988,15 @@ class FrequencyNode {
 }
 ```
 
-### functionComposition **[→ Line 111](./codewars.js#L111)**
+### functionComposition 
+**[→ Line 111](./codewars.js#L111)**
 
 ```javascript
 const functionComposition = (...fns) => (x) => fns.reduceRight((y, f) => f(y), x);
 ```
 
-### Garage **[→ Line 1531](./codewars.js#L1531)**
+### Garage 
+**[→ Line 1531](./codewars.js#L1531)**
 
 ```javascript
 class Garage {
@@ -1007,25 +1060,29 @@ class Garage {
 }
 ```
 
-### gauss **[→ Line 5](./codewars.js#L5)**
+### gauss 
+**[→ Line 5](./codewars.js#L5)**
 
 ```javascript
 const gauss = (n) => n * (n + 1) / 2;
 ```
 
-### gaussmod **[→ Line 7](./codewars.js#L7)**
+### gaussmod 
+**[→ Line 7](./codewars.js#L7)**
 
 ```javascript
 const gaussmod = (n) => n * (n + 1) * (n + 2) / 6;
 ```
 
-### GCD **[→ Line 83](./codewars.js#L83)**
+### GCD 
+**[→ Line 83](./codewars.js#L83)**
 
 ```javascript
 const GCD = (a, b) => (b ? GCD(b, a % b) : a);
 ```
 
-### generateColor **[→ Line 944](./codewars.js#L944)**
+### generateColor 
+**[→ Line 944](./codewars.js#L944)**
 
 ```javascript
 const generateColor = () => {
@@ -1040,7 +1097,8 @@ const generateColor = () => {
 };
 ```
 
-### genfib **[→ Line 973](./codewars.js#L973)**
+### genfib 
+**[→ Line 973](./codewars.js#L973)**
 
 ```javascript
 const genfib = (n) => {
@@ -1058,7 +1116,8 @@ const genfib = (n) => {
 };
 ```
 
-### genPrimeArr **[→ Line 287](./codewars.js#L287)**
+### genPrimeArr 
+**[→ Line 287](./codewars.js#L287)**
 
 ```javascript
 const genPrimeArr = (n) => {
@@ -1082,7 +1141,8 @@ const genPrimeArr = (n) => {
 };
 ```
 
-### genSubsets **[→ Line 873](./codewars.js#L873)**
+### genSubsets 
+**[→ Line 873](./codewars.js#L873)**
 
 ```javascript
 const genSubsets = (arr) => {
@@ -1098,7 +1158,8 @@ const genSubsets = (arr) => {
 };
 ```
 
-### getAvgOfDiaganols **[→ Line 447](./codewars.js#L447)**
+### getAvgOfDiaganols 
+**[→ Line 447](./codewars.js#L447)**
 
 ```javascript
 const getAvgOfDiaganols = (m) => {
@@ -1122,7 +1183,8 @@ const getAvgOfDiaganols = (m) => {
 };
 ```
 
-### getCallbackParamNames **[→ Line 93](./codewars.js#L93)**
+### getCallbackParamNames 
+**[→ Line 93](./codewars.js#L93)**
 
 ```javascript
 const getCallbackParamNames = (f) => {
@@ -1130,13 +1192,15 @@ const getCallbackParamNames = (f) => {
 };
 ```
 
-### getIndexOfSpaces **[→ Line 87](./codewars.js#L87)**
+### getIndexOfSpaces 
+**[→ Line 87](./codewars.js#L87)**
 
 ```javascript
 const getIndexOfSpaces = (str) => [...str.matchAll(/ /g)].map((a, i) => a.index - i);
 ```
 
-### getMatrixProduct **[→ Line 611](./codewars.js#L611)**
+### getMatrixProduct 
+**[→ Line 611](./codewars.js#L611)**
 
 ```javascript
 const getMatrixProduct = (a, b) => {
@@ -1159,19 +1223,22 @@ const getMatrixProduct = (a, b) => {
 };
 ```
 
-### getmax **[→ Line 31](./codewars.js#L31)**
+### getmax 
+**[→ Line 31](./codewars.js#L31)**
 
 ```javascript
 const getmax = (arr) => arr.reduce((acc, val) => (Math.max(acc, val)), -Infinity);
 ```
 
-### getmin **[→ Line 29](./codewars.js#L29)**
+### getmin 
+**[→ Line 29](./codewars.js#L29)**
 
 ```javascript
 const getmin = (arr) => arr.reduce((acc, val) => (Math.max(acc, val)), Infinity);
 ```
 
-### getNumberOfSquares **[→ Line 747](./codewars.js#L747)**
+### getNumberOfSquares 
+**[→ Line 747](./codewars.js#L747)**
 
 ```javascript
 const getNumberOfSquares = (n) => {
@@ -1186,7 +1253,8 @@ const getNumberOfSquares = (n) => {
 };
 ```
 
-### getNumsWith3Divisors **[→ Line 307](./codewars.js#L307)**
+### getNumsWith3Divisors 
+**[→ Line 307](./codewars.js#L307)**
 
 ```javascript
 const getNumsWith3Divisors = (n, m) => {
@@ -1218,7 +1286,8 @@ const getNumsWith3Divisors = (n, m) => {
 };
 ```
 
-### getPromiseState **[→ Line 1322](./codewars.js#L1322)**
+### getPromiseState 
+**[→ Line 1322](./codewars.js#L1322)**
 
 ```javascript
 const getPromiseState = (promise) => {
@@ -1235,7 +1304,8 @@ const getPromiseState = (promise) => {
 };
 ```
 
-### getSignOfNum **[→ Line 49](./codewars.js#L49)**
+### getSignOfNum 
+**[→ Line 49](./codewars.js#L49)**
 
 ```javascript
 const getSignOfNum = (x) => {
@@ -1243,7 +1313,8 @@ const getSignOfNum = (x) => {
 };
 ```
 
-### getYearDiff **[→ Line 683](./codewars.js#L683)**
+### getYearDiff 
+**[→ Line 683](./codewars.js#L683)**
 
 ```javascript
 const getYearDiff = (start, end = new Date()) => {
@@ -1254,7 +1325,8 @@ const getYearDiff = (start, end = new Date()) => {
 };
 ```
 
-### hash **[→ Line 199](./codewars.js#L199)**
+### hash 
+**[→ Line 199](./codewars.js#L199)**
 
 ```javascript
 const hash = (a) => {
@@ -1264,13 +1336,15 @@ const hash = (a) => {
 };
 ```
 
-### hasNum **[→ Line 9](./codewars.js#L9)**
+### hasNum 
+**[→ Line 9](./codewars.js#L9)**
 
 ```javascript
 const hasNum = (num, target) => String(num).includes(String(target)); // n * (n + 1) * (n + 2) / 6
 ```
 
-### heapsPermute **[→ Line 1144](./codewars.js#L1144)**
+### heapsPermute 
+**[→ Line 1144](./codewars.js#L1144)**
 
 ```javascript
 const heapsPermute = (perm) => {
@@ -1301,7 +1375,8 @@ const heapsPermute = (perm) => {
 };
 ```
 
-### HTMLGen **[→ Line 1518](./codewars.js#L1518)**
+### HTMLGen 
+**[→ Line 1518](./codewars.js#L1518)**
 
 ```javascript
 class HTMLGen {
@@ -1318,49 +1393,57 @@ class HTMLGen {
 }
 ```
 
-### inorder **[→ Line 35](./codewars.js#L35)**
+### inorder 
+**[→ Line 35](./codewars.js#L35)**
 
 ```javascript
 const inorder = (arr) => arr.every((x, i) => i === 0 || (x > arr[i - 1] || x < arr[i - 1]));
 ```
 
-### isAnagram **[→ Line 77](./codewars.js#L77)**
+### isAnagram 
+**[→ Line 77](./codewars.js#L77)**
 
 ```javascript
 const isAnagram = (w) => w !== w.toLowerCase().split('').sort().join('');
 ```
 
-### isEven **[→ Line 21](./codewars.js#L21)**
+### isEven 
+**[→ Line 21](./codewars.js#L21)**
 
 ```javascript
 const isEven = (n) => !(n & 1);
 ```
 
-### isLeapYear **[→ Line 23](./codewars.js#L23)**
+### isLeapYear 
+**[→ Line 23](./codewars.js#L23)**
 
 ```javascript
 const isLeapYear = (y) => ((y % 4 === 0) && (y % 100 !== 0)) || (y % 400 === 0);
 ```
 
-### isNum **[→ Line 3](./codewars.js#L3)**
+### isNum 
+**[→ Line 3](./codewars.js#L3)**
 
 ```javascript
 const isNum = (num) => !isNaN(+num);
 ```
 
-### isPerfectSq **[→ Line 13](./codewars.js#L13)**
+### isPerfectSq 
+**[→ Line 13](./codewars.js#L13)**
 
 ```javascript
 const isPerfectSq = (n) => Math.sqrt(n) === Math.trunc(Math.sqrt(n));
 ```
 
-### isPowerOfTwo **[→ Line 75](./codewars.js#L75)**
+### isPowerOfTwo 
+**[→ Line 75](./codewars.js#L75)**
 
 ```javascript
 const isPowerOfTwo = (n) => Math.log2(n) % 1 === 0; // is number power of two, power of 2
 ```
 
-### isPrime **[→ Line 308](./codewars.js#L308)**
+### isPrime 
+**[→ Line 308](./codewars.js#L308)**
 
 ```javascript
   const isPrime = (np) => {
@@ -1374,7 +1457,8 @@ const isPowerOfTwo = (n) => Math.log2(n) % 1 === 0; // is number power of two, p
   };
 ```
 
-### isPrime2 **[→ Line 966](./codewars.js#L966)**
+### isPrime2 
+**[→ Line 966](./codewars.js#L966)**
 
 ```javascript
 const isPrime2 = (n) => {
@@ -1385,7 +1469,8 @@ const isPrime2 = (n) => {
 };
 ```
 
-### largestSubarrayIndex **[→ Line 932](./codewars.js#L932)**
+### largestSubarrayIndex 
+**[→ Line 932](./codewars.js#L932)**
 
 ```javascript
 const largestSubarrayIndex = (mtr) => {
@@ -1401,7 +1486,8 @@ const largestSubarrayIndex = (mtr) => {
 };
 ```
 
-### lazyChain **[→ Line 1228](./codewars.js#L1228)**
+### lazyChain 
+**[→ Line 1228](./codewars.js#L1228)**
 
 ```javascript
 const lazyChain = (arg, calls = []) => {
@@ -1431,13 +1517,15 @@ const lazyChain = (arg, calls = []) => {
 };
 ```
 
-### LCM **[→ Line 85](./codewars.js#L85)**
+### LCM 
+**[→ Line 85](./codewars.js#L85)**
 
 ```javascript
 const LCM = (a, b) => a * b / GCD(a, b);
 ```
 
-### lcmRange **[→ Line 758](./codewars.js#L758)**
+### lcmRange 
+**[→ Line 758](./codewars.js#L758)**
 
 ```javascript
 const lcmRange = (m, n) => {
@@ -1447,13 +1535,15 @@ const lcmRange = (m, n) => {
 };
 ```
 
-### lengthOfNum **[→ Line 53](./codewars.js#L53)**
+### lengthOfNum 
+**[→ Line 53](./codewars.js#L53)**
 
 ```javascript
 const lengthOfNum = (n) => Math.trunc(Math.log10(Math.abs(n))) + 1;
 ```
 
-### longestBouncyList **[→ Line 855](./codewars.js#L855)**
+### longestBouncyList 
+**[→ Line 855](./codewars.js#L855)**
 
 ```javascript
 const longestBouncyList = (arr) => {
@@ -1475,7 +1565,8 @@ const longestBouncyList = (arr) => {
 };
 ```
 
-### longestComb **[→ Line 885](./codewars.js#L885)**
+### longestComb 
+**[→ Line 885](./codewars.js#L885)**
 
 ```javascript
 const longestComb = (arr, cmd = '<<') => {
@@ -1512,7 +1603,8 @@ const longestComb = (arr, cmd = '<<') => {
 };
 ```
 
-### magicArray **[→ Line 1441](./codewars.js#L1441)**
+### magicArray 
+**[→ Line 1441](./codewars.js#L1441)**
 
 ```javascript
 const magicArray = (...args) => {
@@ -1532,7 +1624,8 @@ const magicArray = (...args) => {
 };
 ```
 
-### matchBetween **[→ Line 521](./codewars.js#L521)**
+### matchBetween 
+**[→ Line 521](./codewars.js#L521)**
 
 ```javascript
 const matchBetween = (left, right, str) => {
@@ -1544,55 +1637,64 @@ const matchBetween = (left, right, str) => {
 };
 ```
 
-### mathCeil1 **[→ Line 61](./codewars.js#L61)**
+### mathCeil1 
+**[→ Line 61](./codewars.js#L61)**
 
 ```javascript
 const mathCeil1 = (x) => x + 0.999 | 0;
 ```
 
-### mathFloor1 **[→ Line 63](./codewars.js#L63)**
+### mathFloor1 
+**[→ Line 63](./codewars.js#L63)**
 
 ```javascript
 const mathFloor1 = (x) => Math.trunc(x);
 ```
 
-### mathFloor2 **[→ Line 65](./codewars.js#L65)**
+### mathFloor2 
+**[→ Line 65](./codewars.js#L65)**
 
 ```javascript
 const mathFloor2 = (x) => x - (x % 1);
 ```
 
-### mathFloor3 **[→ Line 67](./codewars.js#L67)**
+### mathFloor3 
+**[→ Line 67](./codewars.js#L67)**
 
 ```javascript
 const mathFloor3 = (x) => x | 0;
 ```
 
-### mathFloor4 **[→ Line 69](./codewars.js#L69)**
+### mathFloor4 
+**[→ Line 69](./codewars.js#L69)**
 
 ```javascript
 const mathFloor4 = (x) => (-(-(x) | 0));
 ```
 
-### mathRound1 **[→ Line 55](./codewars.js#L55)**
+### mathRound1 
+**[→ Line 55](./codewars.js#L55)**
 
 ```javascript
 const mathRound1 = (x) => x + 0.5 | 0;
 ```
 
-### mathRound2 **[→ Line 57](./codewars.js#L57)**
+### mathRound2 
+**[→ Line 57](./codewars.js#L57)**
 
 ```javascript
 const mathRound2 = (x) => +x.toFixed(0);
 ```
 
-### mathRound3 **[→ Line 59](./codewars.js#L59)**
+### mathRound3 
+**[→ Line 59](./codewars.js#L59)**
 
 ```javascript
 const mathRound3 = (x) => Number.parseInt(x + 0.5);
 ```
 
-### mergeStrings **[→ Line 430](./codewars.js#L430)**
+### mergeStrings 
+**[→ Line 430](./codewars.js#L430)**
 
 ```javascript
 const mergeStrings = (a, b) => {
@@ -1605,13 +1707,15 @@ const mergeStrings = (a, b) => {
 };
 ```
 
-### mod **[→ Line 1](./codewars.js#L1)**
+### mod 
+**[→ Line 1](./codewars.js#L1)**
 
 ```javascript
 const mod = (n, m) => ((n % m) + m) % m;
 ```
 
-### modtwo **[→ Line 120](./codewars.js#L120)**
+### modtwo 
+**[→ Line 120](./codewars.js#L120)**
 
 ```javascript
 const modtwo = (a, b) => {
@@ -1620,19 +1724,22 @@ const modtwo = (a, b) => {
 };
 ```
 
-### mult **[→ Line 27](./codewars.js#L27)**
+### mult 
+**[→ Line 27](./codewars.js#L27)**
 
 ```javascript
 const mult = (arr) => arr.reduce((a, v) => a * v, 1);
 ```
 
-### myXOR **[→ Line 73](./codewars.js#L73)**
+### myXOR 
+**[→ Line 73](./codewars.js#L73)**
 
 ```javascript
 const myXOR = (x, y) => (x | y) & (~x | ~y);
 ```
 
-### nextMultipleOfFive **[→ Line 1266](./codewars.js#L1266)**
+### nextMultipleOfFive 
+**[→ Line 1266](./codewars.js#L1266)**
 
 ```javascript
 const nextMultipleOfFive = (n) => {
@@ -1650,7 +1757,8 @@ const nextMultipleOfFive = (n) => {
 };
 ```
 
-### numPerm **[→ Line 1116](./codewars.js#L1116)**
+### numPerm 
+**[→ Line 1116](./codewars.js#L1116)**
 
 ```javascript
 const numPerm = (arr) => {
@@ -1663,7 +1771,8 @@ const numPerm = (arr) => {
 };
 ```
 
-### objectDepthCount **[→ Line 1405](./codewars.js#L1405)**
+### objectDepthCount 
+**[→ Line 1405](./codewars.js#L1405)**
 
 ```javascript
 const objectDepthCount = (obj) => {
@@ -1688,7 +1797,8 @@ const objectDepthCount = (obj) => {
 };
 ```
 
-### paginate **[→ Line 205](./codewars.js#L205)**
+### paginate 
+**[→ Line 205](./codewars.js#L205)**
 
 ```javascript
 const paginate = (arr) => {
@@ -1706,7 +1816,8 @@ const paginate = (arr) => {
 };
 ```
 
-### pascal **[→ Line 1350](./codewars.js#L1350)**
+### pascal 
+**[→ Line 1350](./codewars.js#L1350)**
 
 ```javascript
 const pascal = (n) => {
@@ -1727,7 +1838,8 @@ const pascal = (n) => {
 };
 ```
 
-### permutator **[→ Line 1125](./codewars.js#L1125)**
+### permutator 
+**[→ Line 1125](./codewars.js#L1125)**
 
 ```javascript
 const permutator = (inputArr) => {
@@ -1750,7 +1862,8 @@ const permutator = (inputArr) => {
 };
 ```
 
-### permute **[→ Line 507](./codewars.js#L507)**
+### permute 
+**[→ Line 507](./codewars.js#L507)**
 
 ```javascript
 const permute = (arr) => {
@@ -1768,7 +1881,8 @@ const permute = (arr) => {
 };
 ```
 
-### permuteArr **[→ Line 493](./codewars.js#L493)**
+### permuteArr 
+**[→ Line 493](./codewars.js#L493)**
 
 ```javascript
 const permuteArr = (arr) => {
@@ -1786,7 +1900,8 @@ const permuteArr = (arr) => {
 };
 ```
 
-### permuteHeaps **[→ Line 467](./codewars.js#L467)**
+### permuteHeaps 
+**[→ Line 467](./codewars.js#L467)**
 
 ```javascript
 const permuteHeaps = (permutation) => {
@@ -1816,13 +1931,15 @@ const permuteHeaps = (permutation) => {
 };
 ```
 
-### permuteMatrix **[→ Line 105](./codewars.js#L105)**
+### permuteMatrix 
+**[→ Line 105](./codewars.js#L105)**
 
 ```javascript
 const permuteMatrix = (arr) => arr.reduce((acc, sub) => acc * sub.reduce((acc, el) => acc.add(el), new Set()).size, 1); // [[1,2],[4,4],[5,6,6]] --> 4
 ```
 
-### primeFactorSum **[→ Line 391](./codewars.js#L391)**
+### primeFactorSum 
+**[→ Line 391](./codewars.js#L391)**
 
 ```javascript
 const primeFactorSum = (n) => {
@@ -1837,7 +1954,8 @@ const primeFactorSum = (n) => {
 };
 ```
 
-### PriorityQueue **[→ Line 1600](./codewars.js#L1600)**
+### PriorityQueue 
+**[→ Line 1600](./codewars.js#L1600)**
 
 ```javascript
 class PriorityQueue {
@@ -1858,7 +1976,8 @@ class PriorityQueue {
 }
 ```
 
-### prog **[→ Line 1101](./codewars.js#L1101)**
+### prog 
+**[→ Line 1101](./codewars.js#L1101)**
 
 ```javascript
 const prog = (n, max, min) => {
@@ -1877,7 +1996,8 @@ const prog = (n, max, min) => {
 };
 ```
 
-### proxyArr **[→ Line 1457](./codewars.js#L1457)**
+### proxyArr 
+**[→ Line 1457](./codewars.js#L1457)**
 
 ```javascript
 const proxyArr = (arr) => {
@@ -1901,7 +2021,8 @@ const proxyArr = (arr) => {
 };
 ```
 
-### queueMonoIncr **[→ Line 1184](./codewars.js#L1184)**
+### queueMonoIncr 
+**[→ Line 1184](./codewars.js#L1184)**
 
 ```javascript
 const queueMonoIncr = (nums) => {
@@ -1920,7 +2041,8 @@ const queueMonoIncr = (nums) => {
 };
 ```
 
-### recordDepth **[→ Line 1388](./codewars.js#L1388)**
+### recordDepth 
+**[→ Line 1388](./codewars.js#L1388)**
 
 ```javascript
 const recordDepth = (tree, depth = 0) => {
@@ -1941,13 +2063,15 @@ const recordDepth = (tree, depth = 0) => {
 };
 ```
 
-### removeAdjacentDup **[→ Line 97](./codewars.js#L97)**
+### removeAdjacentDup 
+**[→ Line 97](./codewars.js#L97)**
 
 ```javascript
 const removeAdjacentDup = (arr) => arr.filter((i, idx) => arr[idx - i] !== i); // remove adjacent duplicates array
 ```
 
-### removeCharFromMatrix **[→ Line 630](./codewars.js#L630)**
+### removeCharFromMatrix 
+**[→ Line 630](./codewars.js#L630)**
 
 ```javascript
 const removeCharFromMatrix = (ma, char) => {
@@ -1960,7 +2084,8 @@ const removeCharFromMatrix = (ma, char) => {
 };
 ```
 
-### removeDuplicatesInMatrix **[→ Line 639](./codewars.js#L639)**
+### removeDuplicatesInMatrix 
+**[→ Line 639](./codewars.js#L639)**
 
 ```javascript
 const removeDuplicatesInMatrix = (arr) => {
@@ -1973,19 +2098,22 @@ const removeDuplicatesInMatrix = (arr) => {
 };
 ```
 
-### removeElementsWithDuplicates **[→ Line 101](./codewars.js#L101)**
+### removeElementsWithDuplicates 
+**[→ Line 101](./codewars.js#L101)**
 
 ```javascript
 const removeElementsWithDuplicates = (arr) => arr.filter((v, j) => !arr.some((n, i) => j !== i && n === v));
 ```
 
-### removeLastDigit **[→ Line 37](./codewars.js#L37)**
+### removeLastDigit 
+**[→ Line 37](./codewars.js#L37)**
 
 ```javascript
 const removeLastDigit = (n) => n / 10 | 0;
 ```
 
-### replaceObjectValueInPlace **[→ Line 1367](./codewars.js#L1367)**
+### replaceObjectValueInPlace 
+**[→ Line 1367](./codewars.js#L1367)**
 
 ```javascript
 const replaceObjectValueInPlace = (data, repl) => {
@@ -2010,7 +2138,8 @@ const replaceObjectValueInPlace = (data, repl) => {
 };
 ```
 
-### reverseNum **[→ Line 345](./codewars.js#L345)**
+### reverseNum 
+**[→ Line 345](./codewars.js#L345)**
 
 ```javascript
 const reverseNum = (n, r = 0) => {
@@ -2019,7 +2148,8 @@ const reverseNum = (n, r = 0) => {
 };
 ```
 
-### reverseNumber **[→ Line 350](./codewars.js#L350)**
+### reverseNumber 
+**[→ Line 350](./codewars.js#L350)**
 
 ```javascript
 const reverseNumber = (n) => {
@@ -2034,7 +2164,8 @@ const reverseNumber = (n) => {
 };
 ```
 
-### rotateArrayLeft **[→ Line 1301](./codewars.js#L1301)**
+### rotateArrayLeft 
+**[→ Line 1301](./codewars.js#L1301)**
 
 ```javascript
 const rotateArrayLeft = (arr) => {
@@ -2043,7 +2174,8 @@ const rotateArrayLeft = (arr) => {
 };
 ```
 
-### slidingWindowBasic1 **[→ Line 256](./codewars.js#L256)**
+### slidingWindowBasic1 
+**[→ Line 256](./codewars.js#L256)**
 
 ```javascript
 const slidingWindowBasic1 = (arr, k) => {
@@ -2060,7 +2192,8 @@ const slidingWindowBasic1 = (arr, k) => {
 };
 ```
 
-### smallestCommonFactor **[→ Line 764](./codewars.js#L764)**
+### smallestCommonFactor 
+**[→ Line 764](./codewars.js#L764)**
 
 ```javascript
 const smallestCommonFactor = (arr) => {
@@ -2096,19 +2229,22 @@ const smallestCommonFactor = (arr) => {
 };
 ```
 
-### solveForX **[→ Line 39](./codewars.js#L39)**
+### solveForX 
+**[→ Line 39](./codewars.js#L39)**
 
 ```javascript
 const solveForX = (a, b, x) => (x - b) / a;
 ```
 
-### sortAlph **[→ Line 79](./codewars.js#L79)**
+### sortAlph 
+**[→ Line 79](./codewars.js#L79)**
 
 ```javascript
 const sortAlph = (arr) => arr.sort((a, b) => a.localeCompare(b));
 ```
 
-### sortHash **[→ Line 113](./codewars.js#L113)**
+### sortHash 
+**[→ Line 113](./codewars.js#L113)**
 
 ```javascript
 const sortHash = (hash) => {
@@ -2119,7 +2255,8 @@ const sortHash = (hash) => {
 };
 ```
 
-### sortOddFirst **[→ Line 402](./codewars.js#L402)**
+### sortOddFirst 
+**[→ Line 402](./codewars.js#L402)**
 
 ```javascript
 const sortOddFirst = (arr) => {
@@ -2130,7 +2267,8 @@ const sortOddFirst = (arr) => {
 };
 ```
 
-### splitArrayEvenOdd **[→ Line 89](./codewars.js#L89)**
+### splitArrayEvenOdd 
+**[→ Line 89](./codewars.js#L89)**
 
 ```javascript
 const splitArrayEvenOdd = (arr) => {
@@ -2138,7 +2276,8 @@ const splitArrayEvenOdd = (arr) => {
 };
 ```
 
-### splitdel **[→ Line 550](./codewars.js#L550)**
+### splitdel 
+**[→ Line 550](./codewars.js#L550)**
 
 ```javascript
 const splitdel = (inputString, leftDelimiter, rightDelimiter) => {
@@ -2159,7 +2298,8 @@ const splitdel = (inputString, leftDelimiter, rightDelimiter) => {
 };
 ```
 
-### splitInParts **[→ Line 529](./codewars.js#L529)**
+### splitInParts 
+**[→ Line 529](./codewars.js#L529)**
 
 ```javascript
 const splitInParts = (s, partLength) => {
@@ -2168,7 +2308,8 @@ const splitInParts = (s, partLength) => {
 };
 ```
 
-### splitKeep **[→ Line 534](./codewars.js#L534)**
+### splitKeep 
+**[→ Line 534](./codewars.js#L534)**
 
 ```javascript
 const splitKeep = (str, delim) => {
@@ -2188,7 +2329,8 @@ const splitKeep = (str, delim) => {
 };
 ```
 
-### splitString **[→ Line 567](./codewars.js#L567)**
+### splitString 
+**[→ Line 567](./codewars.js#L567)**
 
 ```javascript
 const splitString = (str) => {
@@ -2199,7 +2341,8 @@ const splitString = (str) => {
 };
 ```
 
-### standFib **[→ Line 996](./codewars.js#L996)**
+### standFib 
+**[→ Line 996](./codewars.js#L996)**
 
 ```javascript
 const standFib = (n) => {
@@ -2217,7 +2360,8 @@ const standFib = (n) => {
 };
 ```
 
-### Stream **[→ Line 1617](./codewars.js#L1617)**
+### Stream 
+**[→ Line 1617](./codewars.js#L1617)**
 
 ```javascript
 class Stream {
@@ -2245,13 +2389,15 @@ class Stream {
 }
 ```
 
-### sum **[→ Line 25](./codewars.js#L25)**
+### sum 
+**[→ Line 25](./codewars.js#L25)**
 
 ```javascript
 const sum = (arr) => arr.reduce((a, v) => a + v, 0);
 ```
 
-### sumDigits **[→ Line 149](./codewars.js#L149)**
+### sumDigits 
+**[→ Line 149](./codewars.js#L149)**
 
 ```javascript
 const sumDigits = (k) => {
@@ -2265,25 +2411,29 @@ const sumDigits = (k) => {
 };
 ```
 
-### sumOfSquares **[→ Line 15](./codewars.js#L15)**
+### sumOfSquares 
+**[→ Line 15](./codewars.js#L15)**
 
 ```javascript
 const sumOfSquares = (n) => (n * ((n + 1) * (n * 2 + 1))) / 6;
 ```
 
-### swap **[→ Line 107](./codewars.js#L107)**
+### swap 
+**[→ Line 107](./codewars.js#L107)**
 
 ```javascript
 const swap = (arr, i, k) => [arr[i], arr[k]] = [arr[k], arr[i]];
 ```
 
-### swap1sand0s **[→ Line 103](./codewars.js#L103)**
+### swap1sand0s 
+**[→ Line 103](./codewars.js#L103)**
 
 ```javascript
 const swap1sand0s = (x) => x.replaceAll(/\d/g, (val) => val ^ 1); // "10000000101101111110011001000" --> "01111111010010000001100110111"
 ```
 
-### swapAdjacentBits **[→ Line 1074](./codewars.js#L1074)**
+### swapAdjacentBits 
+**[→ Line 1074](./codewars.js#L1074)**
 
 ```javascript
 const swapAdjacentBits = (n) => {
@@ -2294,7 +2444,8 @@ const swapAdjacentBits = (n) => {
 };
 ```
 
-### swapArrElement **[→ Line 574](./codewars.js#L574)**
+### swapArrElement 
+**[→ Line 574](./codewars.js#L574)**
 
 ```javascript
 const swapArrElement = (arr) => {
@@ -2311,7 +2462,8 @@ const swapArrElement = (arr) => {
 };
 ```
 
-### swapNestedArrElement **[→ Line 587](./codewars.js#L587)**
+### swapNestedArrElement 
+**[→ Line 587](./codewars.js#L587)**
 
 ```javascript
 const swapNestedArrElement = (arr) => {
@@ -2329,7 +2481,8 @@ const swapNestedArrElement = (arr) => {
 };
 ```
 
-### toBinary **[→ Line 167](./codewars.js#L167)**
+### toBinary 
+**[→ Line 167](./codewars.js#L167)**
 
 ```javascript
 const toBinary = (k) => {
@@ -2365,19 +2518,22 @@ const toBinary = (k) => {
 };
 ```
 
-### transposeMatrix **[→ Line 41](./codewars.js#L41)**
+### transposeMatrix 
+**[→ Line 41](./codewars.js#L41)**
 
 ```javascript
 const transposeMatrix = (m) => m[0].map((_, i) => m.map((__, r) => m[r][i]));
 ```
 
-### triangularLineLength **[→ Line 17](./codewars.js#L17)**
+### triangularLineLength 
+**[→ Line 17](./codewars.js#L17)**
 
 ```javascript
 const triangularLineLength = (n) => Math.trunc(Math.sqrt(2 * n + 0.25) - 0.5);
 ```
 
-### wrapInd **[→ Line 109](./codewars.js#L109)**
+### wrapInd 
+**[→ Line 109](./codewars.js#L109)**
 
 ```javascript
 const wrapInd = (len, diff) => (diff >= 0 ? diff : ((Math.abs(diff) <= len) ? len + diff : mod(diff, len))); // ...wrapInd(26, 40) = 12
