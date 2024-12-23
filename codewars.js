@@ -1,88 +1,120 @@
-const codes = {
-  '¢': 'cent',
-  '£': 'pound',
-  '¥': 'yen',
-  '€': 'euro',
-  '©': 'copy',
-  '®': 'reg',
-  '<': 'lt',
-  '>': 'gt',
-  '"': 'quot',
-  '“': 'ldquo',
-  '”': 'rdquo',
-  '&': 'amp',
-  '\'': '#39',
-  '–': 'ndash',
-  '’': 'rsquo',
-};
-
-const numberDict = {
-  ones: {
-    0: 'zero',
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six',
-    7: 'seven',
-    8: 'eight',
-    9: 'nine',
-    mod: 1,
-  },
-  tens: {
-    10: 'ten',
-    11: 'eleven',
-    12: 'twelve',
-    13: 'thirteen',
-    14: 'fourteen',
-    15: 'fifteen',
-    16: 'sixteen',
-    17: 'seventeen',
-    18: 'eighteen',
-    19: 'nineteen',
-    2: 'twenty',
-    3: 'thirty',
-    4: 'forty',
-    5: 'fifty',
-    6: 'sixty',
-    7: 'seventy',
-    8: 'eighty',
-    9: 'ninety',
-    mod: 10,
-  },
-  hundred: { mod: 100 },
-  thousand: { mod: 1000 },
-};
-
-const gk = { 0: 'ones', 1: 'tens', 2: 'hundred', 3: 'thousand' };
-const alph = 'abcdefghijklmnopqrstuvwxyz';
-const alph2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const vowels = 'aeiou';
-const vowels2 = 'AEIOU';
-const consonants = 'bcdfghjklmnpqrstvwxyz';
-const consonants2 = 'BCDFGHJKLMNPQRSTVWXYZ';
-const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397];
-const uniqmap = { a: 2, b: 3, c: 5, d: 7, e: 11, f: 13, g: 17, h: 19, i: 23, j: 29, k: 31, l: 37, m: 41, n: 43, o: 47, p: 53, q: 59, r: 61, s: 67, t: 71, u: 73, v: 79, w: 83, x: 89, y: 97, z: 101 };
-const romannum = {
-  1: 'I',
-  4: 'IV',
-  5: 'V',
-  9: 'IX',
-  10: 'X',
-  40: 'XL',
-  50: 'L',
-  90: 'XC',
-  100: 'C',
-  400: 'CD',
-  500: 'D',
-  900: 'CM',
-  1000: 'M',
-};
 const mod = (n, m) => ((n % m) + m) % m;
 
-const createMatrix = (a, b) => {
-  return new Array(a).fill().map((_, i) => new Array(b).fill().map((__, j) => ''));
+const isNum = (num) => !isNaN(+num);
+
+const gauss = (n) => n * (n + 1) / 2;
+
+const gaussmod = (n) => n * (n + 1) * (n + 2) / 6;
+
+const hasNum = (num, target) => String(num).includes(String(target)); // n * (n + 1) * (n + 2) / 6
+
+const findGCD = (a, b) => (b === 0 ? a : findGCD(b, a % b));
+
+const isPerfectSq = (n) => Math.sqrt(n) === Math.trunc(Math.sqrt(n));
+
+const sumOfSquares = (n) => (n * ((n + 1) * (n * 2 + 1))) / 6;
+
+const triangularLineLength = (n) => Math.trunc(Math.sqrt(2 * n + 0.25) - 0.5);
+
+const boolToInt = (bool) => bool | 0;
+
+const isEven = (n) => !(n & 1);
+
+const isLeapYear = (y) => ((y % 4 === 0) && (y % 100 !== 0)) || (y % 400 === 0);
+
+const sum = (arr) => arr.reduce((a, v) => a + v, 0);
+
+const mult = (arr) => arr.reduce((a, v) => a * v, 1);
+
+const getmin = (arr) => arr.reduce((acc, val) => (Math.max(acc, val)), Infinity);
+
+const getmax = (arr) => arr.reduce((acc, val) => (Math.max(acc, val)), -Infinity);
+
+const divide = (a, b) => (b === 0 ? 0 : (a === 0 ? 0 : a * b ** -1));
+
+const inorder = (arr) => arr.every((x, i) => i === 0 || (x > arr[i - 1] || x < arr[i - 1]));
+
+const removeLastDigit = (n) => n / 10 | 0;
+
+const solveForX = (a, b, x) => (x - b) / a;
+
+const transposeMatrix = (m) => m[0].map((_, i) => m.map((__, r) => m[r][i]));
+
+const createMatrix = (a, b) => new Array(a).fill().map((_, i) => new Array(b).fill().map((__, j) => ''));
+
+const addCommasToNum = (n) => {
+  return (`${n}`).replaceAll(/.(?=(\d{3})+$)/g, '$&,');
+};
+
+const getSignOfNum = (x) => {
+  return (isNaN(+x) ? Number.NaN : +x == 0 ? 0 : +x < 0 ? -1 : 1);
+};
+
+const lengthOfNum = (n) => Math.trunc(Math.log10(Math.abs(n))) + 1;
+
+const mathRound1 = (x) => x + 0.5 | 0;
+
+const mathRound2 = (x) => +x.toFixed(0);
+
+const mathRound3 = (x) => Number.parseInt(x + 0.5);
+
+const mathCeil1 = (x) => x + 0.999 | 0;
+
+const mathFloor1 = (x) => Math.trunc(x);
+
+const mathFloor2 = (x) => x - (x % 1);
+
+const mathFloor3 = (x) => x | 0;
+
+const mathFloor4 = (x) => (-(-(x) | 0));
+
+const bitMod1 = (a, b) => (b ? a - b * (a / b | 0) : Number.NaN);
+
+const myXOR = (x, y) => (x | y) & (~x | ~y);
+
+const isPowerOfTwo = (n) => Math.log2(n) % 1 === 0; // is number power of two, power of 2
+
+const isAnagram = (w) => w !== w.toLowerCase().split('').sort().join('');
+
+const sortAlph = (arr) => arr.sort((a, b) => a.localeCompare(b));
+
+const comp = (a, b, i, m) => (i < m ? a[i] - b[i] || comp(a, b, i + 1, m) : 0);
+
+const GCD = (a, b) => (b ? GCD(b, a % b) : a);
+
+const LCM = (a, b) => a * b / GCD(a, b);
+
+const getIndexOfSpaces = (str) => [...str.matchAll(/ /g)].map((a, i) => a.index - i);
+
+const splitArrayEvenOdd = (arr) => {
+  return arr.reduce((a, b) => (b % 2 === 0 ? { ...a, e: [...a.e, b] } : { ...a, o: [...a.o, b] }), { e: [], o: [] });
+};
+
+const getCallbackParamNames = (f) => {
+  return (f.length > 0 ? /\(([^()]+)\)/.exec(f.toString().replaceAll(/\s+/g, ''))[1].split(',') : []);
+};
+
+const removeAdjacentDup = (arr) => arr.filter((i, idx) => arr[idx - i] !== i); // remove adjacent duplicates array
+
+const extractIdsFromObject = (data) => (JSON.stringify(data).matchAll(/"id":\d+/gi) || []).map((n) => +n[0].match(/\d+/g)[0]);
+
+const removeElementsWithDuplicates = (arr) => arr.filter((v, j) => !arr.some((n, i) => j !== i && n === v));
+
+const swap1sand0s = (x) => x.replaceAll(/\d/g, (val) => val ^ 1); // "10000000101101111110011001000" --> "01111111010010000001100110111"
+
+const permuteMatrix = (arr) => arr.reduce((acc, sub) => acc * sub.reduce((acc, el) => acc.add(el), new Set()).size, 1); // [[1,2],[4,4],[5,6,6]] --> 4
+
+const swap = (arr, i, k) => [arr[i], arr[k]] = [arr[k], arr[i]];
+
+const wrapInd = (len, diff) => (diff >= 0 ? diff : ((Math.abs(diff) <= len) ? len + diff : mod(diff, len))); // ...wrapInd(26, 40) = 12
+
+const functionComposition = (...fns) => (x) => fns.reduceRight((y, f) => f(y), x);
+
+const sortHash = (hash) => {
+  return Object.keys(hash).sort().reduce((a, b) => {
+    { a[b] = hash[b]; }
+    return a;
+  }, {});
 };
 
 const modtwo = (a, b) => {
@@ -96,27 +128,10 @@ const calcTrueMod = (dividend, exponent, modulus) => {
   const result = Math.round(base * power) % modulus;
   return result;
 };
-const comp = (a, b, i, m) => (i < m ? a[i] - b[i] || comp(a, b, i + 1, m) : 0);
 
-// EQUATIONS
-const isNum = (num) => !isNaN(+num);
-const gauss = (n) => n * (n + 1) / 2;
-const gaussmod = (n) => n * (n + 1) * (n + 2) / 6;
-// n * (n + 1) * (n + 2) / 6
-const hasNum = (num, target) => String(num).includes(String(target));
-const findGCD = (a, b) => (b === 0 ? a : findGCD(b, a % b));
-const isPerfectSq = (n) => Math.sqrt(n) === Math.trunc(Math.sqrt(n));
-const sumOfSquares = (n) => (n * ((n + 1) * (n * 2 + 1))) / 6;
-const triangularLineLength = (n) => {
-  return Math.trunc(Math.sqrt(2 * n + 0.25) - 0.5);
-};
-const boolToInt = (bool) => bool | 0;
-// --------------------------------------------
-
-// **********************************
-// Linear Diophantine, basic example to determine how many 5's and 2's are represented 'k' amount of times in sum 'n'. Only works if GCD of coefficients of 2 variables divides the constant term perfectly.
-// countFiveAndTwo(123, 39) --> [24, 15];
 const countFiveAndTwo = (n, k) => {
+  // Linear Diophantine, basic example to determine how many 5's and 2's are represented 'k' amount of times in sum 'n'. Only works if GCD of coefficients of 2 variables divides the constant term perfectly.
+  // countFiveAndTwo(123, 39) --> [24, 15];
   const k5 = Math.trunc((n - 2 * k) / 3);
   const k2 = Math.trunc((n - 5 * k5) / 2);
   if (k2 < 0 || k5 < 0) return 'Invalid';
@@ -124,24 +139,11 @@ const countFiveAndTwo = (n, k) => {
   return [k2, k5];
 };
 
-// countFourAndTwo(200, 72) --> [44, 28];
 const countFourAndTwo = (n, k) => {
+  // countFourAndTwo(200, 72) --> [44, 28];
   const k4 = Math.trunc(n / 2) - k;
   const k2 = k - k4;
   return [k2, k4];
-};
-
-// **********************************
-const sum = (arr) => arr.reduce((a, v) => a + v, 0);
-const mult = (arr) => arr.reduce((a, v) => a * v, 1);
-const getmin = (arr) => arr.reduce((acc, val) => (Math.max(acc, val)), Infinity);
-const getmax = (arr) => arr.reduce((acc, val) => (Math.max(acc, val)), -Infinity);
-const inorder = (arr) => arr.every((x, i) => i === 0 || (x > arr[i - 1] || x < arr[i - 1]));
-
-const divide = (a, b) => {
-  if (b == 0) return 0;
-  if (a == 0) return 0;
-  return a * b ** -1;
 };
 
 const sumDigits = (k) => {
@@ -162,7 +164,7 @@ const findUniqNumInArr = (arr) => {
   return res;
 };
 
-function toBinary(k) {
+const toBinary = (k) => {
   const intToBin = (k) => {
     if (k === 0 || k === 1) return k;
     return k % 2 === 0 ? `${intToBin(k / 2)}0` : `${intToBin(Math.trunc(k / 2))}1`;
@@ -192,7 +194,7 @@ function toBinary(k) {
       return '';
     }
   }
-}
+};
 
 const hash = (a) => {
   const m = {};
@@ -200,20 +202,11 @@ const hash = (a) => {
   return m;
 };
 
-/*
-COMPARIING EACH EL IN ARR TO EACH OTHER
-for (let i = 0; i < arr.length; i++) {
-  for (let j = i + 1; j < arr.length; j++) {
-    // comp arr[i], arr[j]
-  }
-}
-*/
-
-// [1, 3, 4, 5, 7, 9, 10] --> '1, 3-5, 7, 9-10'
 const paginate = (arr) => {
+  // [1, 3, 4, 5, 7, 9, 10] --> '1, 3-5, 7, 9-10'
   arr.sort((a, b) => a - b);
-  const res = []; let
-    start = arr[0];
+  const res = [];
+  let start = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] + 1 !== arr[i + 1]) {
       res.push([start, arr[i]]);
@@ -223,12 +216,7 @@ const paginate = (arr) => {
   return res.map((v) => (v[0] === v[1] ? v[0] : `${v[0]}-${v[1]}`)).join(', ');
 };
 
-const getCallbackParamNames = (f) => {
-  return f.length > 0 ? /\(([^()]+)\)/.exec(f.toString().replaceAll(/\s+/g, ''))[1].split(',') : [];
-};
-
-// example of using backtracking with map
-function find(s) {
+const find = (s) => {
   let left = 0; let right = 0; let max = 0; let
     start = 0;
   const map = new Map();
@@ -252,7 +240,7 @@ function find(s) {
   }
 
   return s.slice(start, start + max);
-}
+};
 
 const divideArray = (arr, k) => {
   const res = [];
@@ -278,25 +266,14 @@ const slidingWindowBasic1 = (arr, k) => {
   return res;
 };
 
-// find duplicate in unsorted array: xor operator
-// [1, 3, 2, 5, 4, 5, 7, 6], 5
 const findDup = (arr) => {
+  // find duplicate in unsorted array: xor operator
+  // [1, 3, 2, 5, 4, 5, 7, 6], 5
   let dup = arr[0];
   for (let i = 1; i < arr.length; i++) {
     dup = dup ^ arr[i] ^ i;
   }
   return dup;
-};
-
-const removeElementsWithDuplicates = (arr) => {
-  return arr.filter((v, j) => !arr.some((n, i) => j !== i && n === v));
-};
-
-const sortHash = (hash) => {
-  return Object.keys(hash).sort().reduce((a, b) => {
-    { a[b] = hash[b]; }
-    return a;
-  }, {});
 };
 
 const arrHash = (arr) => {
@@ -305,10 +282,6 @@ const arrHash = (arr) => {
     m[arr[i]] = m[arr[i]] ? [...m[arr[i]], i] : [i];
   }
   return m;
-};
-
-const extractIdsFromObject = (data) => {
-  return (JSON.stringify(data).matchAll(/"id":\d+/gi) || []).map((n) => +n[0].match(/\d+/g)[0]);
 };
 
 const genPrimeArr = (n) => {
@@ -332,12 +305,12 @@ const genPrimeArr = (n) => {
 };
 
 const getNumsWith3Divisors = (n, m) => {
-  const isPrime = (n) => {
-    if (n < 2) return false;
-    if (n === 2) return true;
-    if (n % 2 === 0) return false;
-    for (let i = 3; i <= Math.sqrt(n); i += 2) {
-      if (n % i === 0) return false;
+  const isPrime = (np) => {
+    if (np < 2) return false;
+    if (np === 2) return true;
+    if (np % 2 === 0) return false;
+    for (let i = 3; i <= Math.sqrt(np); i += 2) {
+      if (np % i === 0) return false;
     }
     return true;
   };
@@ -369,11 +342,6 @@ const divisorsSum = (n) => {
   return sum;
 };
 
-const addCommasToNum = (n) => {
-  return (`${n}`).replaceAll(/.(?=(\d{3})+$)/g, '$&,');
-};
-
-// reverse number
 const reverseNum = (n, r = 0) => {
   while (n > 0) r = r * 10 + (n % 10), n = Math.trunc(n / 10);
   return r;
@@ -431,21 +399,6 @@ const primeFactorSum = (n) => {
   return n > 1 ? sum + n : sum;
 };
 
-const getSignOfNum = (x) => {
-  return isNaN(+x) ? Number.NaN : +x == 0 ? 0 : +x < 0 ? -1 : 1;
-};
-
-const lengthOfNum = (n) => Math.trunc(Math.log10(Math.abs(n))) + 1;
-
-// is number power of two, power of 2
-const isPowerOfTwo = (n) => Math.log2(n) % 1 === 0;
-
-const isAnagram = (w) => {
-  return w !== w.toLowerCase().split('').sort().join('');
-};
-
-const sortAlph = (arr) => arr.sort((a, b) => a.localeCompare(b));
-
 const sortOddFirst = (arr) => {
   return arr.sort((a, b) => {
     const [o1, o2] = [Math.trunc(a) % 2 !== 0, Math.trunc(b) % 2 !== 0];
@@ -474,8 +427,8 @@ const convPeriodicFrac = (n, d) => {
   return `${div.slice(0, ind)}(${div.slice(ind)})`;
 };
 
-// "abcde" + "cdefgh" => "abcdefgh"
 const mergeStrings = (a, b) => {
+  // "abcde" + "cdefgh" => "abcdefgh"
   let ov = '';
   for (let i = 0; i < Math.min(a.length, b.length); i++) {
     ov = (a.slice(a.length - i - 1) === b.slice(0, i + 1)) ? a + b.slice(i + 1) : ov;
@@ -483,8 +436,8 @@ const mergeStrings = (a, b) => {
   return ov || a + b;
 };
 
-// (convertToMixedNumeral('-504/26'), '-19 10/26')
 const convertToMixedNumeral = (parm) => {
+  // (convertToMixedNumeral('-504/26'), '-19 10/26')
   const [n, d] = parm.split('/').map(Number);
   const diff = n % d; const
     intg = Math.trunc(n / d);
@@ -511,23 +464,8 @@ const getAvgOfDiaganols = (m) => {
   return [Math.round(sum1 / len1), Math.round(Math.abs(sum2 / len2))].map((v) => (isNaN(v) ? -1 : v));
 };
 
-// [[1,2],[4,4],[5,6,6]] --> 4
-const permuteMatrix = (arr) => {
-  return arr.reduce((acc, sub) => acc * sub.reduce((acc, el) => acc.add(el), new Set()).size, 1);
-};
-
-const functionComposition = (...fns) => (x) => {
-  // https://medium.com/javascript-scene/why-every-react-developer-should-learn-function-composition-23f41d4db3b1
-  /*
-  const addOne = (a) => a + 1;
-  const multTwo = (b) => b * 2;
-  const addOneMultTwo = functionComposition(multTwo, addOne)(5); // 12
-  */
-  return fns.reduceRight((y, f) => f(y), x);
-};
-
-// permute, heaps, comb, backtrack
 const permuteHeaps = (permutation) => {
+  // permute, heaps, comb, backtrack
   const { length } = permutation;
   const result = [[...permutation]];
   const c = new Array(length).fill(0);
@@ -580,21 +518,21 @@ const permute = (arr) => {
   return perms;
 };
 
-// Match characters between given left and right character
 const matchBetween = (left, right, str) => {
-  function generateRegex(left, right) {
-    return new RegExp(`(?<=${left})(.*?)(?=${right})`, 'g');
-  }
+  // Match characters between given left and right character
+  const generateRegex = (tl, tr) => {
+    return new RegExp(`(?<=${tl})(.*?)(?=${tr})`, 'g');
+  };
   return str.match(generateRegex(left, right));
 };
 
-// break str @ every partlength
-function splitInParts(s, partLength) {
+const splitInParts = (s, partLength) => {
+  // break str @ every partlength
   return s.match(new RegExp(`.{1,${partLength}}`, 'g')).join('\n');
-}
+};
 
-// split but keep the delimiter
-function splitKeep(str, delim) {
+const splitKeep = (str, delim) => {
+  // split but keep the delimiter
   const res = [];
   let temp = '';
   for (let i = 0; i < str.length; i++) {
@@ -607,16 +545,16 @@ function splitKeep(str, delim) {
   }
   res.push(temp);
   return res;
-}
+};
 
-// Split string by delimeter
-function splitdel(inputString, leftDelimiter, rightDelimiter) {
+const splitdel = (inputString, leftDelimiter, rightDelimiter) => {
+  // Split string by delimeter
   // Escape special characters in the delimiters for use in regex
-  const escapeRegExp = (string) => string.replaceAll(/[$()*+.?[\\\]^{|}]/g, String.raw`\$&`);
-
+  const escapeRegExp = (string) => {
+    return string.replaceAll(/[$()*+.?[\\\]^{|}]/g, String.raw`\$&`);
+  };
   // Create the regular expression
   const regex = new RegExp(`${escapeRegExp(leftDelimiter)}(.*?)${escapeRegExp(rightDelimiter)}`, 'g');
-
   // Find matches
   const matches = [];
   let match;
@@ -624,10 +562,6 @@ function splitdel(inputString, leftDelimiter, rightDelimiter) {
     matches.push(match[1]);
   }
   return matches;
-}
-
-const splitArrayEvenOdd = (arr) => {
-  return arr.reduce((a, b) => (b % 2 === 0 ? { ...a, e: [...a.e, b] } : { ...a, o: [...a.o, b] }), { e: [], o: [] });
 };
 
 const splitString = (str) => {
@@ -664,9 +598,8 @@ const swapNestedArrElement = (arr) => {
   return arr;
 };
 
-const swap = (arr, i, k) => [arr[i], arr[k]] = [arr[k], arr[i]];
-// find char in nested array
 const findchar = (arr, char) => {
+  // find char in nested array
   const row = arr.findIndex((sub) => sub.includes(char));
   if (~row) {
     const col = arr[row].indexOf(char);
@@ -712,44 +645,30 @@ const removeDuplicatesInMatrix = (arr) => {
   }, []);
 };
 
-// call function n number of times
-const createIterator = (func, n) => {
-  return (x) => {
-    for (let i = 0; i < n; i++) {
-      x = func(x);
-    }
-    return x;
-  };
+const createIterator = (func, n) => (x) => {
+  // call function n number of times
+  for (let i = 0; i < n; i++) {
+    x = func(x);
+  }
+  return x;
 };
 
-// function with state two
 const cycle = (...values) => {
+  // function with state two
   let curr = 0;
-  return () => {
-    return values[mod(curr++, values.length)];
-  };
+  return () => values[mod(curr++, values.length)];
 };
 
-const functionWithState = (function() {
-  // ...functionWithState.getState('prop')
-  const memo = {};
-  return {
-    getState(prop) {},
-  };
-}());
-
-// get all combinations of multiple arrays
-// combineMultArr([arr1, arr2])
 const combineMultArr = ([head, ...[headTail, ...tailTail]]) => {
+  // get all combinations of multiple arrays
+  // combineMultArr([arr1, arr2])
   if (!headTail) return head;
-  const combined = headTail.reduce((acc, x) => {
-    return acc.concat(head.map((h) => `${h}${x}`));
-  }, []);
+  const combined = headTail.reduce((acc, x) => acc.concat(head.map((h) => `${h}${x}`)), []);
   return combineMultArr([combined, ...tailTail]);
 };
 
-// combineObjects({...}, {...})
-function combineObjects(...args) {
+const combineObjects = (...args) => {
+  // combineObjects({...}, {...})
   if (!args) return {};
   const base = {};
   for (let i = 0; i < args.length; i++) {
@@ -759,10 +678,7 @@ function combineObjects(...args) {
     }
   }
   return base;
-}
-
-// **********************************
-const isLeapYear = (y) => ((y % 4 === 0) && (y % 100 !== 0)) || (y % 400 === 0);
+};
 
 const getYearDiff = (start, end = new Date()) => {
   return Math.trunc((
@@ -771,12 +687,10 @@ const getYearDiff = (start, end = new Date()) => {
   ) / 31_536e6);
 };
 
-// **********************************
-// **********************************
-/**
- * get array of values from deeply nested object
- */
 const deepVals = (obj) => {
+  /**
+   * get array of values from deeply nested object
+   */
   if (!obj) return [];
   let data = [];
   const keys = {};
@@ -797,10 +711,10 @@ const deepReverse = (l) => {
   return l.map(deepReverse).reverse();
 };
 
-/**
- * get array of keys from deeply nested object
- */
 const deepKeys = (t, pre = []) => {
+  /**
+   * get array of keys from deeply nested object
+   */
   if (Array.isArray(t)) {
     return [];
   } if (Object(t) === t) {
@@ -809,9 +723,8 @@ const deepKeys = (t, pre = []) => {
   return pre.join('.');
 };
 
-// **********************************
-// TWOPOINTERS: aaabba -> a3b2a
-function compress(str) {
+const compress = (str) => {
+  // TWOPOINTERS: aaabba -> a3b2a
   if (str.length <= 1) return str;
   let left = 0; let
     right = 0;
@@ -829,11 +742,10 @@ function compress(str) {
     right++;
   }
   return res + (last ? last[0] + (last.length > 1 ? last.length : '') : '');
-}
+};
 
-// **********************************
-// i.e. n = 15 (1^2 + 2^2 + 3^2)
 const getNumberOfSquares = (n) => {
+  // i.e. n = 15 (1^2 + 2^2 + 3^2)
   let a = 1; let
     cnt = 1;
   while (cnt <= n) {
@@ -843,25 +755,11 @@ const getNumberOfSquares = (n) => {
   return a - 1;
 };
 
-const GCD = (a, b) => (b ? GCD(b, a % b) : a);
-const LCM = (a, b) => a * b / GCD(a, b);
 const lcmRange = (m, n) => {
-  return m > n
+  return (m > n
     ? lcmRange(n, m)
-    : Array.from({ length: n - m + 1 }, (_, idx) => m + idx).reduce(LCM);
+    : Array.from({ length: n - m + 1 }, (_, idx) => m + idx).reduce(LCM));
 };
-// const gcd = (a, b) => {
-//   var R;
-//   while ((a % b) > 0) {
-//     R = a % b;
-//     a = b;
-//     b = R;
-//   }
-//   return b;
-// };
-// const lcm = (a, b) => {
-//   return (a / gcd(a, b) * b);
-// };
 
 const smallestCommonFactor = (arr) => {
   const isPrime = (n) => {
@@ -895,17 +793,15 @@ const smallestCommonFactor = (arr) => {
   return 1;
 };
 
-// **********************************
-// CURRY AND PARTIAL APPLICATION
-function add(n) {
+const curryAdd = (n) => {
   return function(m) {
     return n + m;
   };
-}
+};
 
-// console.log(countdown(-3)(-5)()(+2)(-1)()()(),
-// [3, 7, 6, 3, 3, 2, 1, 0]);
-function curryCountdown(times, arr = []) {
+const curryCountdown = (times, arr = []) => {
+  // console.log(countdown(-3)(-5)()(+2)(-1)()()(),
+  // [3, 7, 6, 3, 3, 2, 1, 0]);
   if (times >= 0) {
     arr.push(0);
     return arr;
@@ -922,35 +818,9 @@ function curryCountdown(times, arr = []) {
     arr.push(Math.abs(times++));
     return hd;
   };
-}
-
-// ...wrapInd(26, 40) = 12
-const wrapInd = (len, diff) => (diff >= 0 ? diff : ((Math.abs(diff) <= len) ? len + diff : mod(diff, len)));
-
-// **********************************
-Array.prototype.flatten = function() {
-  const flatten = (arr) => arr.reduce((acc, val) => (Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val)), []);
-  const res = flatten(this);
-  return res;
 };
 
-Array.prototype.wrapRemove = function(index, count) {
-  if (index + count > this.length) {
-    return this.slice(0, index).concat(this.slice(index + count - this.length));
-  }
-  return this.slice(0, index).concat(this.slice(index + count));
-};
-
-Array.prototype.remove = function(index, count) {
-  if (index + count > this.length) { count = this.length - index; }
-  return this.slice(0, index).concat(this.slice(index + count));
-};
-
-Array.prototype.at = function(index) {
-  return index < 0 ? this[this.length + index] : this[index];
-};
-
-function findSubarrMaxSum(arr) {
+const findSubarrMaxSum = (arr) => {
   if (arr.length === 0) return [[], 0];
   let maxSum = 0; let
     currentSum = 0;
@@ -980,11 +850,11 @@ function findSubarrMaxSum(arr) {
   }
   if (!maxSum) return 0;
   return m[maxSum];
-}
+};
 
-// [1, 2, 3, 2, 1, ...]
-// Good alternative to windows
 const longestBouncyList = (arr) => {
+  // [1, 2, 3, 2, 1, ...]
+  // Good alternative to windows
   let l = [arr[0]]; let
     m = l;
   for (let i = 0; i < arr.length; i++) {
@@ -1000,8 +870,8 @@ const longestBouncyList = (arr) => {
   return m.length < l.length ? l : m;
 };
 
-// Generate subsets, permutations, combinations
 const genSubsets = (arr) => {
+  // Generate subsets, permutations, combinations
   const subs = [[]];
   for (const el of arr) {
     const len = subs.length - 1;
@@ -1012,9 +882,9 @@ const genSubsets = (arr) => {
   return subs;
 };
 
-// finds multiple longest increasing or decreasing subsequence
-// << increasing, >> decreasing
 const longestComb = (arr, cmd = '<<') => {
+  // finds multiple longest increasing or decreasing subsequence
+  // << increasing, >> decreasing
   cmd = cmd.replaceAll(/\s/g, '');
   let pot = []; let
     maxLen = 0;
@@ -1071,68 +941,10 @@ const largestSubarrayIndex = (mtr) => {
   return ind;
 };
 
-const getIndexOfSpaces = (str) => {
-  return [...str.matchAll(/ /g)].map((a, i) => a.index - i);
-};
-
-String.prototype.matchAllPoly = function(regexp, matches = [], match) {
-  while ((match = regexp.exec(this)) !== null) matches.push(match);
-  return matches;
-};
-
-// {
-//   "t":["h","r"],
-//   "h":"i",
-//   "i":["s","s","n"],
-//   "s":[" "," ","t"],
-//   " ":["i","a","s"],
-//   "a":" ",
-//   "r":"i",
-//   "n":"g",
-//   "g":"t"
-// }
-// 'this is a string'
-String.prototype.hashify = function() {
-  const m = {};
-  for (const l of this) { m[l] = m[l] === undefined ? '' : []; }
-  for (let i = 1; i <= this.length; i++) {
-    const after = i == this.length ? this[0] : this[i];
-    if (after) {
-      if (typeof m[this[i - 1]] === 'string') m[this[i - 1]] += after;
-      else m[this[i - 1]].push(after);
-    }
-  }
-  return m;
-};
-
-// v-(l+s)-(t+y)-(c+f)+(b-(n-p)) --> v-l-s-t-y-c-f+b-n+p
-const simplifyParenthesesExpression = (s) => {
-  const handleSign = (a, b) => ((a === '+' ? 1 : -1) * (b === '+' ? 1 : -1) === 1 ? '+' : '-');
-  let str = '';
-  let currSign = '+';
-  const signs = [currSign];
-  for (let i = 0; i < s.length; i++) {
-    const char = s[i];
-    if (/[+-]/.test(char)) {
-      currSign = char;
-    } else if (/[()]/.test(char)) {
-      if (char === '(') {
-        signs.push(handleSign(signs.at(-1), currSign));
-        currSign = '+';
-      } else {
-        signs.pop();
-      }
-    } else if (/[a-z]/i.test(char)) {
-      const nxt = handleSign(signs.at(-1), currSign);
-      str += (str.length === 0 && nxt === '+' ? '' : nxt) + char;
-      currSign = '+';
-    }
-  }
-  return str;
-};
-
-const generateColor = function() {
-  const rand = () => Math.trunc(Math.random() * 255);
+const generateColor = () => {
+  const rand = () => {
+    return Math.trunc(Math.random() * 255);
+  };
   let res = 16_777_216 + rand();
   for (let i = 0, shf = 16; i < 2; i++, shf -= 8) {
     res += rand() << shf;
@@ -1140,36 +952,8 @@ const generateColor = function() {
   return `#${res.toString(16).slice(1)}`;
 };
 
-// **********************************
-// yield two generators
-function* roundRobin(gen1, gen2) {
-  let message;
-  let curr = gen1;
-  while (true) {
-    const nxt = curr.next(message);
-    message = yield nxt.value;
-    curr = curr === gen1 ? gen2 : gen1;
-  }
-}
-
-// PRIMES GENERATOR
-// const stream = Primes.stream();
-// let pr = [stream.next().value, stream.next().value];
-class Primes {
-  static * stream() {
-    yield 2;
-    let n = 3;
-    while (true) {
-      if (isPrime(n)) {
-        yield n;
-      }
-      n += 2;
-    }
-  }
-}
-
-// FAST CHECK PRIME
 const isPrime = (n) => {
+  // FAST CHECK PRIME
   if (n < 2) return false;
   if (n === 2) return true;
   if (n % 2 === 0) return false;
@@ -1178,25 +962,18 @@ const isPrime = (n) => {
   }
   return true;
 };
+
 const isPrime2 = (n) => {
   for (let i = 2; i <= n ** 0.5; i++) {
     if (!(n % i)) return false;
   }
   return n > 1;
 };
-// const isPrime = n => {
-//   for (var a = 3; a <= ~~Math.sqrt(n); a += 2) {
-//     if (n % a == 0) return false;
-//   }
-//   return true;
-// };
 
-// **********************************
-// fastest fib ive tried so far...
-// https://www.nayuki.io/page/fast-fibonacci-algorithms
-// https://www.nayuki.io/res/fast-fibonacci-algorithms/fastfibonacci.js
-
-function genfib(n) {
+const genfib = (n) => {
+  // fastest fib ive tried so far...
+  // https://www.nayuki.io/page/fast-fibonacci-algorithms
+  // https://www.nayuki.io/res/fast-fibonacci-algorithms/fastfibonacci.js
   if (n === 0) return [0, 1];
   const [a, b] = genfib(Math.trunc(n / 2));
   const c = a * (b * 2 - a);
@@ -1205,16 +982,16 @@ function genfib(n) {
     return [c, d];
   }
   return [d, c + d];
-}
+};
 
-function fibWithMod(n) {
-  const mod = 100_000;
+const fibWithMod = (n) => {
+  const tm = 100_000;
   if (n === 0) return [0, 1];
   const [a, b] = fibWithMod(Math.floor(n / 2));
   const c = a * (b * 2 - a);
   const d = a * a + b * b;
-  return n % 2 === 0 ? [c % mod, d % mod] : [d % mod, (c + d) % mod];
-}
+  return n % 2 === 0 ? [c % tm, d % tm] : [d % tm, (c + d) % tm];
+};
 
 const standFib = (n) => {
   let a = 0;
@@ -1229,57 +1006,6 @@ const standFib = (n) => {
   }
   return a;
 };
-
-// memoize the fib above
-// let m = [0, 1, 1];
-// let last = 3;
-// function memoFib(n) {
-//   if (n <= 1) return 0;
-//   if (m[n]) return m[n];
-//   for (let i = last; i <= n; i++) {
-//     m[i] = genfib(i)[0];
-//   }
-//   last = n;
-//   return m[n]
-// }
-
-// easy fib
-// function fibonacci(n) {
-//   if (n <= 0) return [];
-//   let res = [0, 1]
-//   if (n === 1) return [0]
-//   if (n === 2) return res;
-//   for (let i = 2; i < n; i++) {
-//     res.push(res[i - 1] + res[i - 2])
-//   }
-//   return res;
-// }
-
-// **********************************
-/*
-Funny
-
----Math.round:
-x+.5|0
-+x.toFixed()
-parseInt(x + 0.5)
-
----Math.ceil:
-x+.999|0
-
----Math.floor:
-x^0
-x - (x % 1)
-x | 0
-(-(-(x) | 0))
-~~x
-
-Modulus:
-=> b?a-b*(a/b|0):NaN
-*/
-
-// BITWISE
-const myXOR = (x, y) => (x | y) & (~x | ~y);
 
 const bitadd = (x, y) => {
   x = x.padStart(y.length, '0');
@@ -1345,48 +1071,15 @@ const bitwiseSubtract = (x, y) => {
   return x;
 };
 
-const isEven = (n) => !(n & 1);
-function swapAdjacentBits(n) {
+const swapAdjacentBits = (n) => {
   let [a, b] = [n & 0xAA_AA_AA_AA, n & 0x55_55_55_55];
   a >>= 1;
   b <<= 1;
   return a | b;
-}
-
-// "10000000101101111110011001000" --> "01111111010010000001100110111"
-const swap1sand0s = (x) => {
-  return x.replaceAll(/\d/g, (val) => val ^ 1);
 };
 
-// **********************************
-// OOP magic
-class HTMLGen {
-  constructor() {
-    for (const k of ['a', 'b', 'p', 'body', 'div', 'span', 'title']) {
-      this[k] = (str) => this.execTag(k, str);
-    }
-    this.comment = (str) => this.execComment(str);
-  }
-
-  execTag(tag, args) { return `<${tag}>${args}</${tag}>`; }
-
-  execComment(str) { return `<!--${str}-->`; }
-}
-
-// **********************************
-// **********************************
-// **********************************
-// **********************************
-// **********************************
-// STRUCTURES
-
-// remove adjacent duplicates array
-const removeAdjacentDup = (arr) => {
-  return arr.filter((i, idx) => arr[idx - i] !== i);
-};
-
-// binary search with path implementation
 const binarySearch1 = (lst, val) => {
+  // binary search with path implementation
   const path = [];
   let start = 0;
   let end = lst.length - 1;
@@ -1405,52 +1098,52 @@ const binarySearch1 = (lst, val) => {
   return path;
 };
 
-/*
-arithmetic progression - get sum of prod within range
-- n: constant multiplier
-- prog: constant decrement
-- min: minimum value for prog
-
-Example:
-seq(n: 5, prod: 6, min: 2) ->
-(5 * 6) + (5 * 5) + (5 * 4) + (5 * 3) + (5 * 2) = 100
-*/
 const prog = (n, max, min) => {
+  /*
+  arithmetic progression - get sum of prod within range
+  - n: constant multiplier
+  - prog: constant decrement
+  - min: minimum value for prog
+  
+  Example:
+  seq(n: 5, prod: 6, min: 2) ->
+  (5 * 6) + (5 * 5) + (5 * 4) + (5 * 3) + (5 * 2) = 100
+  */
   const terms = max - min + 1;
   return (terms / 2) * (2 * n * max - n * (terms - 1));
 };
 
-// DETERMINE NUMBER OF POSSIBLE PERMUTES OF ARRAY
-function numPerm(arr) {
+const numPerm = (arr) => {
+  // DETERMINE NUMBER OF POSSIBLE PERMUTES OF ARRAY
   let perm = 1;
   for (let i = 1; i <= arr.length; i++) {
     perm *= i;
   }
   return perm;
-}
+};
 
-// permute comb
 const permutator = (inputArr) => {
+  // permute comb
   const result = [];
 
-  const permute = (arr, m = []) => {
+  const pm = (arr, m = []) => {
     if (arr.length === 0) {
       result.push(m);
     } else {
       for (let i = 0; i < arr.length; i++) {
         const curr = [...arr];
         const next = curr.splice(i, 1);
-        permute([...curr], m.concat(next));
+        pm([...curr], m.concat(next));
       }
     }
   };
-  permute(inputArr);
+  pm(inputArr);
   return result;
 };
 
-// https://stackoverflow.com/questions/9960908/permutations-in-javascript?rq=3
-// HEAPS PERMUTE
 const heapsPermute = (perm) => {
+  // https://stackoverflow.com/questions/9960908/permutations-in-javascript?rq=3
+  // HEAPS PERMUTE
   const len = perm.length;
   const res = [[...perm]];
   const c = new Array(len).fill(0);
@@ -1475,8 +1168,8 @@ const heapsPermute = (perm) => {
   return res;
 };
 
-// DFS : SUBSET : 1
 const dfs1 = (nums) => {
+  // DFS : SUBSET : 1
   const res = [];
   const dfs = (idx, path) => {
     res.push(path);
@@ -1488,8 +1181,8 @@ const dfs1 = (nums) => {
   return res;
 };
 
-// QUEUE, STACK, MONO
 const queueMonoIncr = (nums) => {
+  // QUEUE, STACK, MONO
   const n = nums.length;
   const ans = new Array(n).fill(0);
   const stack = [];
@@ -1503,9 +1196,341 @@ const queueMonoIncr = (nums) => {
   return ans;
 };
 
-// states (statemap): opening, open, closing, closed, paused
-// 0: open|closed|paused, 1: opening, -1: closing
+const countPermsOfMatrix = (mtr) => {
+  // count possible of permutations of matrix;
+  const fact = (n) => {
+    let res = 1;
+    for (let i = 1; i <= n; i++) {
+      res *= i;
+    }
+    return res;
+  };
+  const flt = mtr.flat();
+  const uniq = [...new Set(flt)];
+  return fact(flt.length) / uniq.reduce((acc, val) => acc * fact(flt.filter((x) => x === val).length), 1);
+};
+
+const buildTrie = (...words) => {
+  // c(buildTrie("trie", "trie"), { 't': { 'tr': { 'tri': { 'trie': null } } } });
+  const trie = {};
+  for (const word of words) {
+    let node = trie;
+    let str = '';
+    for (const char of word) {
+      str += char;
+      node[str] = node[str] || (str === word ? null : {});
+      node = node[str];
+    }
+  }
+  return trie;
+};
+
+const lazyChain = (arg, calls = []) => {
+  /*
+  lazyChain(123456789)
+      .invoke('toExponential')
+      .invoke('slice', 2, 5)
+      .invoke('replace', /3/, 'a')
+      .invoke('repeat', 3)
+      .value(), '2a42a42a4'
+  
+  method chaining, chain, lazy eval,
+  */
+  return ({
+    curr: arg,
+    invoke(method, ...rest) {
+      calls.push((curr) => curr[method](...rest));
+      return this;
+    },
+    value() {
+      for (const fn of calls) {
+        this.curr = fn(this.curr);
+      }
+      return this.curr;
+    },
+  });
+};
+
+const compose = (f, g) => {
+  /*
+  compose, chain,
+  const add1 = function (a) { return a + 1; };
+  const id = function (a) { return a; };
+  c(compose(add1, id)(0), 1);
+  const addAll3 = function (a, b, c) { return a + b + c; };
+  c(compose(add1, addAll3)(1, 2, 3), 7);
+  */
+  return (...x) => f(g(...x));
+};
+
+const nextMultipleOfFive = (n) => {
+  const poss = [
+    '0', '1', '01', '11', '001', '101', '011', '111', '0001', '1001', '0101', '1101', '0011', '1011', '0111', '1111', '00001', '10001', '01001', '11001', '00101', '10101', '01101', '11101', '00011', '10011', '01011', '11011', '00111', '10111', '01111', '11111', '000001', '100001', '010001', '110001', '001001', '101001', '011001', '111001', '000101', '100101', '010101', '110101', '001101', '101101', '011101', '111101', '000111', '100111', '010111', '110111', '001111', '101111', '011111', '111111',
+  ];
+  if (n <= 2) return 5;
+  const bin = n.toString(2);
+
+  for (let i = 0; i < poss.length; i++) {
+    const t = Number.parseInt(bin + poss[i], 2);
+    if (t % 5 === 0) return t;
+  }
+  return null;
+};
+
+const buildPriorityQueue = (frequencies) => {
+  const pq = new PriorityQueue();
+  for (const [char, freq] of frequencies) {
+    pq.enqueue(
+      new FrequencyNode(char, freq),
+    );
+  }
+  while (pq.size() > 1) {
+    const left = pq.dequeue();
+    const right = pq.dequeue();
+    const parent = new Node(
+      null,
+      left.freq + right.freq,
+      left,
+      right,
+    );
+    pq.enqueue(parent);
+  }
+  return pq.dequeue();
+};
+
+const rotateArrayLeft = (arr) => {
+  arr.push(arr.shift());
+  return arr.join('');
+};
+
+const calcVariance = (data) => {
+  /*
+  variance and stdDeviation
+  */
+  const getmean = (data) => {
+    return data.reduce((a, b) => a + b, 0) / data.length;
+  };
+  const mean = getmean(data);
+  const vari = getmean(data.map((n) => (n - mean) ** 2));
+  const stdvar = Math.sqrt(vari);
+  return {
+    variance: vari,
+    stdDeviation: stdvar,
+  };
+};
+
+const getPromiseState = (promise) => {
+  /*
+  get promise state
+  fulfilled
+  pending
+  rejected
+  */
+  return new Promise((resolve) => {
+    promise.then(() => resolve('fulfilled'), () => resolve('rejected'));
+    queueMicrotask(() => resolve('pending'));
+  });
+};
+
+const cbMemo = (fn) => {
+  /*
+  memo works w any type and any length of function arguments
+  */
+  const obj = { map: new Map() };
+  return (...args) => {
+    let current = obj;
+    for (const arg of args) {
+      if (!current.map.has(arg)) current.map.set(arg, { map: new Map() });
+      current = current.map.get(arg);
+    }
+    return current.hasOwnProperty('res') ? current.res : current.res = fn(...args);
+  };
+};
+
+const pascal = (n) => {
+  // n = depth
+  // pascal triangle
+  // pascal matrix
+  const mtr = new Array(n).fill().map((_, i) => new Array(i + 1).fill().map((__, j) => ((j === 0 || j === i) ? 1 : ((j + 1 === i || j === 1) ? i : 0))));
+  const prev = [];
+  for (let i = 3; i < n; i++) {
+    for (let k = 1; k < i; k++) {
+      if (mtr[i][k] === 0) mtr[i][k] = prev.shift();
+    }
+    for (let j = 1; j < i; j++) {
+      if (mtr[i][j + 1] !== 1) prev.push(mtr[i][j] + mtr[i][j + 1]);
+    }
+  }
+  return mtr;
+};
+
+const replaceObjectValueInPlace = (data, repl) => {
+  // object search and replace
+  // recursive flat, search, in place, dynamic
+  if (data === undefined || repl === undefined) return data;
+  for (const [k, v] of Object.entries(data)) {
+    if (v === 'dynamic') {
+      data[k] = repl;
+    } else if (Array.isArray(v)) {
+      data[k] = v.map((e) => {
+        if (typeof e === 'object' && e !== null) {
+          return replaceObjectValueInPlace(e, repl);
+        }
+        return e === 'dynamic' ? repl : e;
+      });
+    } else if (typeof v === 'object' && v !== null) {
+      data[k] = replaceObjectValueInPlace(v, repl);
+    }
+  }
+  return data;
+};
+
+const recordDepth = (tree, depth = 0) => {
+  // add depth to each layer of object
+  // recursion
+  if (typeof tree === 'object' && !Array.isArray(tree) && tree !== null) {
+    if (Object.keys(tree).length === 0) return { depth: 0 };
+    for (const [k, v] of Object.entries(tree)) {
+      if (typeof v === 'object' && !Array.isArray(v)) {
+        tree[k] = { ...recordDepth(v, depth + 1), depth: depth + 1 };
+      } else {
+        tree.depth = depth;
+      }
+    }
+    return tree;
+  }
+  return null;
+};
+
+const objectDepthCount = (obj) => {
+  const isobj = (obj) => {
+    return typeof obj === 'object' && !Array.isArray(obj) && obj !== null;
+  };
+  if (isobj(obj)) {
+    let mx = 0;
+    const rn = (obj, cnt) => {
+      for (const key in obj) {
+        if (isobj(obj[key])) {
+          rn(obj[key], cnt + 1);
+        } else {
+          mx = Math.max(mx, cnt);
+        }
+      }
+    };
+    rn(obj, 1);
+    return mx;
+  }
+  return 0;
+};
+
+const countAllStrInstancesInObj = (obj) => {
+  let res = 0;
+  const rnd = (obj) => {
+    for (const key in obj) {
+      if (typeof obj[key] === 'string') {
+        res++;
+      } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+        rnd(obj[key]);
+      }
+    }
+  };
+  rnd(obj);
+  return res;
+};
+
+const magicArray = (...args) => {
+  // Chainable custom methods that work with whatever arguments and native methods
+  return new Proxy(args, {
+    get(target, prop) {
+      if (prop in fn || typeof target[prop] === 'function') {
+        return function(...args) {
+          const method = prop in fn ? fn[prop] : target[prop];
+          const result = method.apply(target, args);
+          return Array.isArray(result) ? magicArray(...result) : result;
+        };
+      }
+      return target[prop];
+    },
+  });
+};
+
+const proxyArr = (arr) => {
+  // define: const arr = proxyArr(arr);
+  const handler = {
+    get(target, prop, receiver) {
+      if (typeof prop === 'string' && !Number.isNaN(Number(prop))) {
+        prop = +prop < 0 ? target.length + +prop : +prop;
+      }
+      return Reflect.get(target, prop, receiver);
+    },
+    set(target, prop, value, receiver) {
+      if (typeof prop === 'string' && !Number.isNaN(Number(prop))) {
+        prop = +prop < 0 ? target.length + +prop : +prop;
+        if (prop < 0) throw new Error('');
+      }
+      return Reflect.set(target, prop, value, receiver);
+    },
+  };
+  return new Proxy(arr, handler);
+};
+
+const magicFunction = {
+  getFiltered(predicate) {
+    return this.filter(predicate);
+  },
+  getRejected(predicate) {
+    return this.filter((e) => !predicate(e));
+  },
+  getSplit(predicate) {
+    return {
+      pass: magicArray(...this.filter(predicate)),
+      fail: magicArray(...this.filter((e) => !predicate(e))),
+    };
+  },
+  double() {
+    return magicArray(...this, ...this);
+  },
+  multiply(n) {
+    return this.filter((e) => typeof e === 'number').map((e) => e * n);
+  },
+  count() {
+    return this.length;
+  },
+  first() {
+    return this.slice(0, 1);
+  },
+  last() {
+    return this.slice(-1);
+  },
+  eq(n) {
+    return this.slice(n, n + 1);
+  },
+};
+
+const functionWithState = (function() {
+  // ...functionWithState.getState('prop')
+  const memo = {};
+  return {
+    getState(prop) {},
+  };
+}());
+
+class HTMLGen {
+  constructor() {
+    for (const k of ['a', 'b', 'p', 'body', 'div', 'span', 'title']) {
+      this[k] = (str) => this.execTag(k, str);
+    }
+    this.comment = (str) => this.execComment(str);
+  }
+
+  execTag(tag, args) { return `<${tag}>${args}</${tag}>`; }
+
+  execComment(str) { return `<!--${str}-->`; }
+}
+
 class Garage {
+  // states (statemap): opening, open, closing, closed, paused
+  // 0: open|closed|paused, 1: opening, -1: closing
   constructor(data) {
     this.doorActions = data;
     this.state = 'closed';
@@ -1563,77 +1588,36 @@ class Garage {
   }
 }
 
-// count possible of permutations of matrix;
-function countPermsOfMatrix(mtr) {
-  const fact = (n) => {
-    let res = 1;
-    for (let i = 1; i <= n; i++) {
-      res *= i;
-    }
-    return res;
-  };
-  const flt = mtr.flat();
-  const uniq = [...new Set(flt)];
-  return fact(flt.length) / uniq.reduce((acc, val) => acc * fact(flt.filter((x) => x === val).length), 1);
-}
-
-// c(buildTrie("trie", "trie"), { 't': { 'tr': { 'tri': { 'trie': null } } } });
-function buildTrie(...words) {
-  const trie = {};
-  for (const word of words) {
-    let node = trie;
-    let str = '';
-    for (const char of word) {
-      str += char;
-      node[str] = node[str] || (str === word ? null : {});
-      node = node[str];
-    }
+class FrequencyNode {
+  constructor(char, freq, left = null, right = null) {
+    this.char = char;
+    this.freq = freq;
+    this.left = left;
+    this.right = right;
   }
-  return trie;
 }
 
-/*
-lazyChain(123456789)
-    .invoke('toExponential')
-    .invoke('slice', 2, 5)
-    .invoke('replace', /3/, 'a')
-    .invoke('repeat', 3)
-    .value(), '2a42a42a4'
+class PriorityQueue {
+  constructor() {
+    this.queue = [];
+  }
 
-method chaining, chain, lazy eval,
-*/
-function lazyChain(arg, calls = []) {
-  return {
-    curr: arg,
-    invoke(method, ...rest) {
-      calls.push((curr) => curr[method](...rest));
-      return this;
-    },
-    value() {
-      for (const fn of calls) {
-        this.curr = fn(this.curr);
-      }
-      return this.curr;
-    },
-  };
+  enqueue(node) {
+    this.queue.push(node);
+    this.queue.sort((a, b) => a.freq - b.freq);
+  }
+
+  dequeue() { return this.queue.shift(); }
+
+  isEmpty() { return this.size() === 0; }
+
+  size() { return this.queue.length; }
 }
 
-/*
-compose, chain,
-const add1 = function (a) { return a + 1; };
-const id = function (a) { return a; };
-c(compose(add1, id)(0), 1);
-const addAll3 = function (a, b, c) { return a + b + c; };
-c(compose(add1, addAll3)(1, 2, 3), 7);
-*/
-function compose(f, g) {
-  return (...x) => f(g(...x));
-}
-
-// endless arrays
-// stream
-// head, tail, Stream and tail() to get the rest of the currentStream without the head
 class Stream {
+  // endless arrays
+  // stream
+  // head, tail, Stream and tail() to get the rest of the currentStream without the head
   constructor(start, output, step) {
     this.start = start;
     this.output = output;
@@ -1653,291 +1637,57 @@ class Stream {
     );
   }
 }
-// var increment = function (n) { return n + 1; };
-// var id = function (n) { return n; };
-// var naturalNumbers = new Stream(0, id, increment);
-// c(naturalNumbers.head(), 0);
-// c(naturalNumbers.tail().head(), 1);
-// c(naturalNumbers.tail().tail().head(), 2);
-// var even = function(n) {return n * 2};
-// var evenNumbers = new Stream(0, even, increment);
-// c(evenNumbers.head(), 0)
-// c(evenNumbers.tail().head(), 2)s
 
-const nextMultipleOfFive = (n) => {
-  const poss = [
-    '0', '1', '01', '11', '001', '101', '011', '111', '0001', '1001', '0101', '1101', '0011', '1011', '0111', '1111', '00001', '10001', '01001', '11001', '00101', '10101', '01101', '11101', '00011', '10011', '01011', '11011', '00111', '10111', '01111', '11111', '000001', '100001', '010001', '110001', '001001', '101001', '011001', '111001', '000101', '100101', '010101', '110101', '001101', '101101', '011101', '111101', '000111', '100111', '010111', '110111', '001111', '101111', '011111', '111111',
-  ];
-  if (n <= 2) return 5;
-  const bin = n.toString(2);
-
-  for (let i = 0; i < poss.length; i++) {
-    const t = Number.parseInt(bin + poss[i], 2);
-    if (t % 5 === 0) return t;
-  }
-  return null;
+String.prototype.matchAllPoly = function(regexp, matches = [], match) {
+  while ((match = regexp.exec(this)) !== null) matches.push(match);
+  return matches;
 };
 
-const removeLastDigit = (n) => {
-  return n / 10 | 0;
+String.prototype.hashify = function() {
+  // {
+  //   "t":["h","r"],
+  //   "h":"i",
+  //   "i":["s","s","n"],
+  //   "s":[" "," ","t"],
+  //   " ":["i","a","s"],
+  //   "a":" ",
+  //   "r":"i",
+  //   "n":"g",
+  //   "g":"t"
+  // }
+  // 'this is a string'
+  const m = {};
+  for (const l of this) { m[l] = m[l] === undefined ? '' : []; }
+  for (let i = 1; i <= this.length; i++) {
+    const after = i == this.length ? this[0] : this[i];
+    if (after) {
+      if (typeof m[this[i - 1]] === 'string') m[this[i - 1]] += after;
+      else m[this[i - 1]].push(after);
+    }
+  }
+  return m;
 };
 
-const solveForX = (a, b, x) => {
-  return (x - b) / a;
-};
-
-class FrequencyNode {
-  constructor(char, freq, left = null, right = null) {
-    this.char = char;
-    this.freq = freq;
-    this.left = left;
-    this.right = right;
-  }
-}
-class PriorityQueue {
-  constructor() {
-    this.queue = [];
-  }
-
-  enqueue(node) {
-    this.queue.push(node);
-    this.queue.sort((a, b) => a.freq - b.freq);
-  }
-
-  dequeue() { return this.queue.shift(); }
-
-  isEmpty() { return this.size() === 0; }
-
-  size() { return this.queue.length; }
-}
-const buildPriorityQueue = (frequencies) => {
-  const pq = new PriorityQueue();
-  for (const [char, freq] of frequencies) {
-    pq.enqueue(
-      new FrequencyNode(char, freq),
-    );
-  }
-  while (pq.size() > 1) {
-    const left = pq.dequeue();
-    const right = pq.dequeue();
-    const parent = new Node(
-      null,
-      left.freq + right.freq,
-      left,
-      right,
-    );
-    pq.enqueue(parent);
-  }
-  return pq.dequeue();
-};
-
-const rotateArrayLeft = (arr) => {
-  arr.push(arr.shift());
-  return arr.join('');
-};
-
-const transposeMatrix = (m) => {
-  return m[0].map((_, i) => {
-    return m.map((__, r) => m[r][i]);
-  });
-};
-
-/*
-variance and stdDeviation
-*/
-const calcVariance = (data) => {
-  const getmean = (data) => data.reduce((a, b) => a + b, 0) / data.length;
-  const mean = getmean(data);
-  const vari = getmean(data.map((n) => (n - mean) ** 2));
-  const stdvar = Math.sqrt(vari);
-  return {
-    variance: vari,
-    stdDeviation: stdvar,
+Array.prototype.flatten = function() {
+  const flatten = (arr) => {
+    return arr.reduce((acc, val) => (Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val)), []);
   };
-};
-
-/*
-get promise state
-fulfilled
-pending
-rejected
-*/
-function getPromiseState(promise) {
-  return new Promise((resolve) => {
-    promise.then(() => resolve('fulfilled'), () => resolve('rejected'));
-    queueMicrotask(() => resolve('pending'));
-  });
-}
-
-/*
-memo works w any type and any length of function arguments
-*/
-const cbMemo = (fn) => {
-  const obj = { map: new Map() };
-  return (...args) => {
-    let current = obj;
-    for (const arg of args) {
-      if (!current.map.has(arg)) current.map.set(arg, { map: new Map() });
-      current = current.map.get(arg);
-    }
-    return current.hasOwnProperty('res') ? current.res : current.res = fn(...args);
-  };
-};
-
-// n = depth
-// pascal triangle
-// pascal matrix
-const pascal = (n) => {
-  const mtr = new Array(n).fill().map((_, i) => new Array(i + 1).fill().map((__, j) => ((j === 0 || j === i) ? 1 : ((j + 1 === i || j === 1) ? i : 0))));
-  const prev = [];
-  for (let i = 3; i < n; i++) {
-    for (let k = 1; k < i; k++) {
-      if (mtr[i][k] === 0) mtr[i][k] = prev.shift();
-    }
-    for (let j = 1; j < i; j++) {
-      if (mtr[i][j + 1] !== 1) prev.push(mtr[i][j] + mtr[i][j + 1]);
-    }
-  }
-  return mtr;
-};
-
-// object search and replace
-// recursive flat, search, in place, dynamic
-const replaceObjectValueInPlace = (data, repl) => {
-  if (data === undefined || repl === undefined) return data;
-  for (const [k, v] of Object.entries(data)) {
-    if (v === 'dynamic') {
-      data[k] = repl;
-    } else if (Array.isArray(v)) {
-      data[k] = v.map((e) => {
-        if (typeof e === 'object' && e !== null) {
-          return replaceObjectValueInPlace(e, repl);
-        }
-        return e === 'dynamic' ? repl : e;
-      });
-    } else if (typeof v === 'object' && v !== null) {
-      data[k] = replaceObjectValueInPlace(v, repl);
-    }
-  }
-  return data;
-};
-
-// add depth to each layer of object
-// recursion
-function recordDepth(tree, depth = 0) {
-  if (typeof tree === 'object' && !Array.isArray(tree) && tree !== null) {
-    if (Object.keys(tree).length === 0) return { depth: 0 };
-    for (const [k, v] of Object.entries(tree)) {
-      if (typeof v === 'object' && !Array.isArray(v)) {
-        tree[k] = { ...recordDepth(v, depth + 1), depth: depth + 1 };
-      } else {
-        tree.depth = depth;
-      }
-    }
-    return tree;
-  }
-  return null;
-}
-
-const objectDepthCount = (obj) => {
-  const isobj = (obj) => typeof obj === 'object' && !Array.isArray(obj) && obj !== null;
-  if (isobj(obj)) {
-    let mx = 0;
-    const rn = (obj, cnt) => {
-      for (const key in obj) {
-        if (isobj(obj[key])) {
-          rn(obj[key], cnt + 1);
-        } else {
-          mx = Math.max(mx, cnt);
-        }
-      }
-    };
-    rn(obj, 1);
-    return mx;
-  }
-  return 0;
-};
-
-const countAllStrInstancesInObj = (obj) => {
-  let res = 0;
-  const rnd = (obj) => {
-    for (const key in obj) {
-      if (typeof obj[key] === 'string') {
-        res++;
-      } else if (typeof obj[key] === 'object' && obj[key] !== null) {
-        rnd(obj[key]);
-      }
-    }
-  };
-  rnd(obj);
+  const res = flatten(this);
   return res;
 };
 
-// Chainable custom methods that work with whatever arguments and native methods
-const magicArray = (...args) => {
-  return new Proxy(args, {
-    get(target, prop) {
-      if (prop in fn || typeof target[prop] === 'function') {
-        return function(...args) {
-          const method = prop in fn ? fn[prop] : target[prop];
-          const result = method.apply(target, args);
-          return Array.isArray(result) ? magicArray(...result) : result;
-        };
-      }
-      return target[prop];
-    },
-  });
+Array.prototype.wrapRemove = function(index, count) {
+  if (index + count > this.length) {
+    return this.slice(0, index).concat(this.slice(index + count - this.length));
+  }
+  return this.slice(0, index).concat(this.slice(index + count));
 };
 
-const magicFunction = {
-  getFiltered(predicate) {
-    return this.filter(predicate);
-  },
-  getRejected(predicate) {
-    return this.filter((e) => !predicate(e));
-  },
-  getSplit(predicate) {
-    return {
-      pass: magicArray(...this.filter(predicate)),
-      fail: magicArray(...this.filter((e) => !predicate(e))),
-    };
-  },
-  double() {
-    return magicArray(...this, ...this);
-  },
-  multiply(n) {
-    return this.filter((e) => typeof e === 'number').map((e) => e * n);
-  },
-  count() {
-    return this.length;
-  },
-  first() {
-    return this.slice(0, 1);
-  },
-  last() {
-    return this.slice(-1);
-  },
-  eq(n) {
-    return this.slice(n, n + 1);
-  },
+Array.prototype.remove = function(index, count) {
+  if (index + count > this.length) { count = this.length - index; }
+  return this.slice(0, index).concat(this.slice(index + count));
 };
 
-// define: const arr = proxyArr(arr);
-const proxyArr = (arr) => {
-  const handler = {
-    get(target, prop, receiver) {
-      if (typeof prop === 'string' && !Number.isNaN(Number(prop))) {
-        prop = +prop < 0 ? target.length + +prop : +prop;
-      }
-      return Reflect.get(target, prop, receiver);
-    },
-    set(target, prop, value, receiver) {
-      if (typeof prop === 'string' && !Number.isNaN(Number(prop))) {
-        prop = +prop < 0 ? target.length + +prop : +prop;
-        if (prop < 0) throw new Error('');
-      }
-      return Reflect.set(target, prop, value, receiver);
-    },
-  };
-  return new Proxy(arr, handler);
+Array.prototype.at = function(index) {
+  return index < 0 ? this[this.length + index] : this[index];
 };
