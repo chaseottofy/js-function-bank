@@ -2,6 +2,8 @@
 
 *readme generated from the following script: [LINK](./generate-readme.js)*
 
+- This is not code I use to develop or for work!! This is code I've written when hobby coding/expirementing
+
 ## Quick Index
 
 - [add](#add) (Line 372)
